@@ -1,0 +1,10 @@
+img{
+    height: 500px!important;
+}
+.name{
+    /* color: black; */
+    text-align: left;
+}
+h6:hover{
+    text-decoration: underline;
+}
