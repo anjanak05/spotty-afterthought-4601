@@ -1,0 +1,99 @@
+* {
+  font-family: benton-sans, Helvetica, 'Sans-serif';
+}
+#singleProductPageContainer {
+  width: 100%;
+  /* border: 1px solid red; */
+  height: auto;
+}
+.TopSectionSingleProductPage {
+  display: flex;
+}
+.TopSectionSingleProductPage > div:nth-child(1) {
+  width: 55%;
+  /* border: 1px solid rgb(0, 255, 68); */
+}
+.TopSectionSingleProductPage > div:nth-child(1) > iframe {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 30px;
+}
+.TopSectionSingleProductPage > div:nth-child(2) {
+  width: 45%;
+  /* border: 1px solid rgb(22, 12, 167); */
+  padding-left: 3%;
+  padding-right: 2%;
+}
+
+.singleProductPageCategory {
+  color: #088366;
+  margin-bottom: 8px;
+  font-weight: 600px;
+  font-size: 21px;
+  letter-spacing: 1px;
+}
+
+.singleProductTitle {
+  color: black;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 42px;
+  letter-spacing: 1.5px;
+  width: 90%;
+}
+
+.singleProductPara {
+  font-size: 28px;
+  letter-spacing: 0.5px;
+}
+
+.singleProductPageCompanyName {
+  margin-top: 3%;
+  display: flex;
+  gap: 10px;
+  font-size: 22px;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.singleProductPageFund {
+  font-size: 23px;
+  color: #2a2a2a;
+  letter-spacing: 0.5px;
+  margin-top: 5%;
+  padding-bottom: 1%;
+}
+
+.singleProductPageFundSecond {
+  font-size: 23px;
+  color: #2a2a2a;
+  letter-spacing: 0.5px;
+      padding-bottom: 1%;
+}
+
+.singleProductPageSocialMedia, .socialMediaIcons{
+    display: flex;
+    justify-content: space-between;
+}
+.singleProductPageSocialMedia>button{
+    border:1px solid rgb(195, 194, 194);
+    display: flex;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 4%;
+    color: black;
+    font-weight: bold;
+}
+
+.socialMediaIcons{
+    width: 23%;
+    height: 40px;
+    margin-top: 4.5%;
+    font-size: 35px;
+    color: rgb(103, 101, 101);
+    justify-content: space-between;
+}

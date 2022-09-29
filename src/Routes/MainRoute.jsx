@@ -21,7 +21,7 @@ const MainRoute = () => {
         <Route path='/PaymentPage' element={<PaymentPage></PaymentPage>}></Route>
         <Route path='/CheckoutPage' element={<CheckoutPage></CheckoutPage>}></Route>
         <Route path='/SingleProductCard' element={<SingleProductCard></SingleProductCard>}></Route>
-  </Routes>
+    </Routes>
   )
 }
 
