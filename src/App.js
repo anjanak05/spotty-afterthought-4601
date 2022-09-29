@@ -4,6 +4,7 @@ import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import MainRoute from './Routes/MainRoute';
 
+
 function App() {
   return (
     <ChakraProvider theme={theme}>
