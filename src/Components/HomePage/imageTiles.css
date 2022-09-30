@@ -1,0 +1,186 @@
+.imageTile_1{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-gap: 20px;
+    padding: 50px;
+}
+.imagediv_img{
+    position: relative;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+.text_centerd{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+.imagediv_text{
+    display: flex;
+    justify-content: space-between;
+}
+.textOur{
+    font-size: .875rem;
+    line-height: 1.4;
+    font-weight: 600;
+    letter-spacing: 0;
+    cursor: pointer;
+}
+.background_imageR{
+   margin-left: 65px;
+   position: relative;
+   text-align: center;
+   color: black;
+}
+.imagetextpostion1{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: 400;
+}
+.imagetextpostion2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: justify;
+}
+.imagetextpostion3{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: .875rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.interetBox01{
+    /* border: solid 1px red; */
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+}
+.interestHeading{
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+}
+.interestDiscover{
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+}
+.interestButton{
+    text-align: center;
+    margin: auto;
+    font-size: .75rem;
+    border: 1px solid #c8c8c8;
+    border-radius: 2px;
+    width: 300px;
+    padding: 10px 1rem;
+    height: 2.5rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+.interestExplore{
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;      
+}
+.interestImage1{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.interestImage2{
+    /* font-size: .875rem ; */
+    height: 80px;
+    width: 80px;
+    
+}
+.interetText02{
+    margin-top: 0.75rem;
+    text-align: center;
+    font-size: .75rem;
+    font-weight: 500;
+}
+.indiegogoReview{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns:repeat(3,1fr) ;
+    grid-gap: 20px;
+}
+.reviewText04R{
+    margin-top: 1rem;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+.reviewText05R{
+    margin-top: 1rem;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    color: #6a6a6a;
+}
+.reviewText06R{
+    font-weight: 600;
+}
+.signUp_button{
+    background-color: #e51075;
+    border: 1px solid #e51075;
+    height: 2.5rem;
+    padding: 3px 1rem;
+    font-size: .75rem;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-right: 1rem;
+}
+
+.learn_button{
+    padding: 3px 1rem;
+    height: 2.5rem;
+    font-size: .75rem;
+    color: #e51075;
+    min-width: 112px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #c8c8c8;
+    border-radius: 2px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.indeigo_text_1{
+    font-weight: 500;
+    padding: 10px 10px 10px 0px;
+}
+
+.findContainer{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.jamtaraClever{
+    font-weight: 400;
+    font-size: 30px;
+    
+}
