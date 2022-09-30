@@ -1,0 +1,122 @@
+.mainContainerR{
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+.mainContinerR1{
+    /* border: solid red 1px; */
+    margin-right: 20px;
+    width: 60%;
+}
+.youContribution{
+    color: #949494;
+    font-size: .875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+.deagonfly{
+    padding-top: 1rem;
+    font-size: 1.5rem ;
+    font-weight: 600;
+
+}
+.payflow_backbutton{
+    padding-top: 1rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    cursor: pointer;
+    font-weight: 500;
+}
+.payflow_shipping{
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: ff-more-web-pro,Georgia,"Serif";
+    margin-top: 10px;
+}
+.payflow_newAdress{
+    border: solid 1px #2a2a2a;
+    border-radius: 2px;
+    margin-top: 1rem;
+    padding: 1rem 1.5rem;
+    font-weight: 500;
+    font-size: 16px;
+}
+.payflow_box1{
+    border: solid 1px #c8c8c8;
+    border-radius: 2px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+}
+.payflow_fullname{
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+.payflow_inputbox{
+    margin-top: 0.5rem;
+    border: solid 1px #ddd;
+    padding: 0.25rem 1rem;
+    border-radius: 2px;
+    height: 3rem;
+    width: 100%;
+    font-size: .875rem;
+}
+.seconContainerPayoff{
+    padding: 0rem 5rem 5rem 5rem;
+    border: solid transparent 1px;
+    background-color: #FAFAFA;
+}
+.payoffContinnerflex{
+    display: flex;
+    justify-content: space-between;
+}
+.payflow_shippingtiles{
+    margin-top: 20px;
+    color: #949494;
+    font-weight: 500;
+}
+.payoff_Total{
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+.payoff_images{
+    width: 72px;
+    height: 48px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.payflow_box1containe{
+    margin-top: 20px;
+    margin-right: 10px;
+}
+.payoff_submitButton{
+    background-color: #e51075;
+    border: 1px solid #e51075;
+    width: 100%;
+    height: 3rem;
+    padding: 3px 1.25rem;
+    font-size: .875rem;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 50px;
+}
+.payoff_logindata{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.payoff_logindata1{
+    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}

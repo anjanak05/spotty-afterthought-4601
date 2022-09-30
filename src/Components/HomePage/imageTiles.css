@@ -31,7 +31,8 @@
     cursor: pointer;
 }
 .background_imageR{
-   margin-left: 65px;
+   margin: auto;
+   width: 90%;
    position: relative;
    text-align: center;
    color: black;
