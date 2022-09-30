@@ -7,7 +7,7 @@ import ProductsPage from './ProductsPage';
 import SingleProductPage from './SingleProductPage';
 import SingleProductCard from "../Components/SingleProductCard"
 
-import Singup from './Singup';
+import Signup from './Signup';
 import Home from './Home';
 
 const MainRoute = () => {
@@ -17,7 +17,7 @@ const MainRoute = () => {
         <Route path='/ProductsPage' element={<ProductsPage></ProductsPage>}></Route>
         <Route path='/SingleProductPage/:id' element={<SingleProductPage></SingleProductPage>}></Route>
         <Route path='/Login' element={<Login></Login>}></Route>
-        <Route path='/Singup' element={<Singup></Singup>}></Route>
+        <Route path='/Signup' element={<Signup></Signup>}></Route>
         <Route path='/PaymentPage' element={<PaymentPage></PaymentPage>}></Route>
         <Route path='/CheckoutPage' element={<CheckoutPage></CheckoutPage>}></Route>
         <Route path='/SingleProductCard' element={<SingleProductCard></SingleProductCard>}></Route>

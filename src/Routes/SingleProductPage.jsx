@@ -51,7 +51,7 @@ console.log(productData)
           {singlProductData.features}
           </p>
           <div className={styles.singleProductPageCompanyName}>
-            <img id={styles.imageCompany}
+            <img 
               src="https://c3.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_40,g_center,q_auto:best,dpr_1.5,f_auto,h_40/slnmsvcmjccipknek42f"
               alt="comapnyPic"
              
