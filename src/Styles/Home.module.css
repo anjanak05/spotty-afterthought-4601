@@ -1,0 +1,51 @@
+img{
+    height: 500px!important;
+}
+.name{
+    /* color: black; */
+    text-align: left;
+}
+h6:hover{
+    text-decoration: underline;
+}
+
+.signUp_button{
+    background-color: #e51075;
+    border: 1px solid #e51075;
+    height: 2.5rem;
+    padding: 3px 1rem;
+    font-size: .75rem;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-right: 1rem;
+}
+
+.learn_button{
+    padding: 3px 1rem;
+    height: 2.5rem;
+    font-size: .75rem;
+    color: #e51075;
+    min-width: 112px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #c8c8c8;
+    border-radius: 2px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+p{
+    font-weight: 500;
+    padding: 10px 10px 10px 0px;
+}
+
+.findContainer{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}

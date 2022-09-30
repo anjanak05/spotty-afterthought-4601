@@ -10,9 +10,9 @@ import {getAudioProjectData} from "../Redux/productPageReducer/action"
 const SingleProductPage = () => {
   const { id } = useParams();
   const [singlProductData, setSingleProductData] = useState({});
-  const productData = useSelector(state => state.productPageReducer.data);
+  const productData = useSelector(state => state.productPageReducer.audioProjects);
   const dispatch = useDispatch();
-
+console.log(productData)
   useEffect(() => {
     if (productData.length === 0) {
       dispatch(getAudioProjectData());
@@ -51,9 +51,10 @@ const SingleProductPage = () => {
           {singlProductData.features}
           </p>
           <div className={styles.singleProductPageCompanyName}>
-            <img
+            <img id={styles.imageCompany}
               src="https://c3.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_40,g_center,q_auto:best,dpr_1.5,f_auto,h_40/slnmsvcmjccipknek42f"
               alt="comapnyPic"
+             
             ></img>
             <div>
               <p className={styles.bold}>Olive Union</p>
