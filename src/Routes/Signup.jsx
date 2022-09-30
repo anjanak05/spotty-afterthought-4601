@@ -64,9 +64,12 @@ const Singup = () => {
                   <Input placeholder='Password' type="password" />
                 </InputGroup>
 
-                <Checkbox marginTop="5px" defaultChecked>Sign me up for the Indiegogo newsletter </Checkbox>
+                <Checkbox marginTop="5px" fontSize="5px" defaultChecked>Sign me up for the Indiegogo newsletter </Checkbox>
+                <Checkbox marginTop="10px" >I agree to the <Link style={{color:"#CF0C67", textDecoration:"underline" , fontWeight:"semibold"}}> Terms of Use</Link> and have read and understand the <Link style={{color:"#CF0C67", textDecoration:"underline",fontWeight:"semibold"}}> Privacy Policy</Link>
+</Checkbox>
+
               </FormControl>
-              <Stack spacing={10} pt={2}>
+              <Stack spacing={2} alignContent="center">
               <Link to="/">
                 <Button
                 borderRadius="none"
@@ -81,6 +84,7 @@ const Singup = () => {
                   Create Account
                 </Button>
                 </Link>
+                <p style={{marginLeft:"220px"}}>Or</p>
                 <Button
                 borderRadius="none"
                   loadingText="Submitting"
