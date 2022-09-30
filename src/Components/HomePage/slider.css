@@ -1,10 +1,10 @@
-img{
-    height: 500px!important;
+.imgforSliderR{
+    height: 500px;
 }
-.name{
+.nameHeadingR{
     /* color: black; */
     text-align: left;
 }
-h6:hover{
+.underlineTag:hover{
     text-decoration: underline;
 }
