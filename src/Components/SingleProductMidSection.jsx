@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from '../Styles/SingleProductMidSection.module.css';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const SingleProductSection = ({ id }) => {
+  const navigate = useNavigate();
   const [singlProductData, setSingleProductData] = useState({});
+
   const productData = useSelector(
     state => state.productPageReducer.audioProjects
   );
@@ -16,6 +19,30 @@ const SingleProductSection = ({ id }) => {
       updatedProductData && setSingleProductData(updatedProductData);
     }
   }, [productData, id]);
+  console.log("pef",singlProductData)
+
+  const title1 = `${singlProductData.title} x 1`;
+  const title2 = `${singlProductData.title} x 2`;
+  const title3 = `${singlProductData.title} x 3`;
+  const price = 299;
+  const price1 = price * 1;
+  const price2 = price * 2;
+  const price3 = price * 3;
+  const image1 = "https://c2.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_762,g_center,q_auto:best,dpr_1.5,f_auto,h_506/mpxk3ni2rijd5sffammm"
+  const image2 = "https://c3.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_762,g_center,q_auto:best,dpr_1.5,f_auto,h_506/nz8a8ueek4jbbdwcnlj3" 
+  const image3 = "https://c4.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_762,g_center,q_auto:best,dpr_1.5,f_auto,h_506/ckzudy3ajms4qo7msavo"
+
+  const HandlePerk = (mainTitle, productTitle, productPrice, imageurl) => {
+    console.log(title1)
+    navigate('/paymentPage', {
+      state: {
+        name: mainTitle,
+        productTitle: productTitle,
+        productPrice: productPrice,
+        imageurl:imageurl,
+      },
+    });
+  };
 
   return (
     <div className={styles.midSectionImages}>
@@ -51,12 +78,12 @@ const SingleProductSection = ({ id }) => {
         <p className={styles.optionTitle}>Select an option</p>
         <div className={styles.rightSideDiv}>
           <img
-            src="https://c2.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_762,g_center,q_auto:best,dpr_1.5,f_auto,h_506/mpxk3ni2rijd5sffammm"
+            src={image1}
             alt="extra pic  "
           />
-          <p>Olive Max x 1 Super Early Bird</p>
+          <p>{title1}</p>
           <p>
-            <b style={{ fontSize: '28px', marginRight: '1%' }}>$299 USD</b>
+            <b style={{ fontSize: '28px', marginRight: '1%' }}>{price1} USD</b>
             <span
               style={{
                 fontSize: '22px',
@@ -79,16 +106,21 @@ const SingleProductSection = ({ id }) => {
             <p>Only 6 left</p>
             <p>Ships worldwide.</p>
           </p>
-          <button>GET THIS PERK</button>
+          <button
+            button
+            onClick={() => HandlePerk(singlProductData.title, title1, price1, image1)}
+          >
+            GET THIS PERK
+          </button>
         </div>
         <div className={styles.rightSideDiv}>
           <img
-            src="https://c3.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_762,g_center,q_auto:best,dpr_1.5,f_auto,h_506/nz8a8ueek4jbbdwcnlj3"
+            src={image2}
             alt="extra pic  "
           />
-          <p>Olive Max x 2 Super Early Bird</p>
+          <p>{title2}</p>
           <p>
-            <b style={{ fontSize: '28px', marginRight: '1%' }}>$529 USD</b>
+            <b style={{ fontSize: '28px', marginRight: '1%' }}>{price2} USD</b>
             <span
               style={{
                 fontSize: '22px',
@@ -111,16 +143,21 @@ const SingleProductSection = ({ id }) => {
             <p>Only 6 left</p>
             <p>Ships worldwide.</p>
           </p>
-          <button>GET THIS PERK</button>
+          <button
+            button
+            onClick={() => HandlePerk(singlProductData.title, title2, price2, image2)}
+          >
+            GET THIS PERK
+          </button>
         </div>
         <div className={styles.rightSideDiv}>
           <img
-            src="https://c4.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_762,g_center,q_auto:best,dpr_1.5,f_auto,h_506/ckzudy3ajms4qo7msavo"
+            src={image3}
             alt="extra pic  "
           />
-          <p>Olive Max x 3 Super Early Bird</p>
+          <p>{title3}</p>
           <p>
-            <b style={{ fontSize: '28px', marginRight: '1%' }}>$659 USD</b>
+            <b style={{ fontSize: '28px', marginRight: '1%' }}>{price3} USD</b>
             <span
               style={{
                 fontSize: '22px',
@@ -143,7 +180,11 @@ const SingleProductSection = ({ id }) => {
             <p>Only 6 left</p>
             <p>Ships worldwide.</p>
           </p>
-          <button>GET THIS PERK</button>
+          <button
+            onClick={() => HandlePerk(singlProductData.title, title3, price3, image3)}
+          >
+            GET THIS PERK
+          </button>
         </div>
       </div>
     </div>

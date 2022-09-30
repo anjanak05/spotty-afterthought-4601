@@ -1,6 +1,4 @@
-* {
-  font-family: benton-sans, Helvetica, 'Sans-serif';
-}
+
 #singleProductPageContainer {
   width: 100%;
   /* border: 1px solid red; */
@@ -8,6 +6,8 @@
 }
 .TopSectionSingleProductPage {
   display: flex;
+  font-family: benton-sans, Helvetica, 'Sans-serif';
+
 }
 .TopSectionSingleProductPage > div:nth-child(1) {
   width: 55%;

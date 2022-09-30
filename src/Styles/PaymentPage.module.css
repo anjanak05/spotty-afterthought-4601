@@ -1,0 +1,210 @@
+#paymentPageContainer {
+  width: 100%;
+  border-Top: 1px solid rgb(192, 187, 187);
+  display: flex;
+  margin: auto;
+  /* padding-bottom: 7%; */
+}
+.paymentPageLeftSection {
+  width: 60%;
+  padding-left: 7%;
+  padding-top: 6%;
+  height: 100%;
+  margin-bottom: 7%;
+  /* border: 1px solid rgb(2, 179, 17); */
+}
+.paymentPageRightSection {
+  width: 40%;
+  background-color: #fafafa;
+  padding-top: 6%;
+  padding-left: 4%;
+  padding-right: 7%;
+  /* border: 1px solid rgb(102, 9, 189); */
+}
+#contriTitle {
+  font-size: 26px;
+  font-weight: bold;
+  font-family: Georgia, 'Serif';
+}
+#addressSideTitle {
+  font-size: 19px;
+  color: #949494;
+  font-family: benton-sans, Helvetica, 'Sans-serif';
+}
+
+#addressSideTitle ~ p {
+  font-size: 32px;
+  margin-top: 2%;
+  font-weight: 600;
+}
+
+#addressSideTitle ~ p ~ p {
+  display: flex;
+}
+
+#createAccount {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-family: Georgia, 'Serif';
+  font-size: 25px;
+}
+
+.emailName {
+  display: flex;
+}
+.emailName > div {
+  width: 50%;
+  font-size: 23px;
+  font-weight: 500;
+  margin-bottom: 4%;
+  /* border: 1px solid rgb(2, 179, 17); */
+}
+.emailName > div > input {
+  margin-top: 2%;
+  width: 90%;
+  height: 65px;
+  border: 1px solid #dedbdb;
+}
+
+.emailName + div,
+.policy {
+  font-size: 23px;
+  display: flex;
+}
+
+.emailName + div > input {
+  width: 15%;
+  height: 25px;
+  margin-left: -52px;
+  margin-right: -40px;
+  margin-top: 0.7%;
+}
+
+.shippingDetailse {
+  padding: 0px 30px 0px 30px;
+  width: 93%;
+  border: 1px solid #d2d0d0;
+}
+
+.shippingDetailse > div {
+  width: 100%;
+  font-weight: 500;
+  font-size: 23px;
+  /* border: 1px solid #14bd6b; */
+  margin-top: 6%;
+}
+
+.shippingDetailse > div > input {
+  width: 100%;
+  height: 65px;
+  margin-top: 2%;
+  border: 1px solid #dedbdb;
+}
+/* <---------------------------RIght section-----------------------> */
+.priceSection,
+.shipping,
+.priceSectionImage,
+.subTotal {
+  display: flex;
+}
+.shipping {
+  padding-top: 4%;
+  justify-content: space-between;
+}
+.subTotal {
+  padding-top: 6%;
+  border-top: 1.5px solid grey;
+  justify-content: space-between;
+}
+
+.subTotal > p,
+.shipping > p {
+  font-size: 24px;
+  color: #949494;
+}
+
+.priceSectionImage > img {
+  width: 27%;
+  height: 63px;
+}
+
+.priceSectionImage > p {
+  font-size: 19px;
+}
+.priceSectionImage {
+  width: 75%;
+  gap: 25px;
+  /* border:1px solid rgb(6, 154, 63) */
+}
+.priceSection {
+  margin-top: 10%;
+  margin-bottom: 9%;
+  justify-content: space-between;
+  /* border:1px solid red */
+}
+.price {
+  font-weight: bold;
+  font-size: 24px;
+}
+.price + p {
+  font-size: 20px;
+  color: #949494;
+}
+.countryArea {
+  margin-top: 4%;
+  margin-bottom: 8%;
+  width: 100%;
+  height: 63px;
+  font-size: 22px;
+  padding-left: 4%;
+  border: 1px solid #d2d0d0;
+}
+
+.paymentWarning {
+  width: 100%;
+  padding: 26px;
+  font-size: 20px;
+  text-align: left;
+  height: auto;
+  margin-top: 8%;
+  margin-bottom: 4%;
+  color: #007575;
+  border: 1px solid #007575;
+}
+.donationWarning {
+  width: 100%;
+  padding: 26px;
+  font-size: 20px;
+  text-align: left;
+  height: auto;
+  margin-top: 8%;
+  margin-bottom: 4%;
+  border: 1px solid #c4c6c6;
+}
+
+.policy {
+  width: 100%;
+  margin: auto;
+  font-size: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.policy > input {
+  width: 15%;
+  height: 25px;
+  margin-left: -8px;
+  margin-top: 0.7%;
+}
+
+.policy + button {
+  font-size: 21px;
+  font-weight: bold;
+  color: white;
+  background-color: #e51075;
+  padding: 18px 125px;
+  border-radius: 3px;
+  margin-top: 6%;
+  display: flex;
+  border: 1px solid #c4c6c6;
+}

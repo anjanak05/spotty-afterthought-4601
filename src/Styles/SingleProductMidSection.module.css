@@ -1,13 +1,14 @@
 .midSectionImages {
-  width: 90%;
+  width: 98%;
   /* border: 1px solid red; */
   margin-left: 2%;
   display: flex;
-  gap: 10%;
+  gap: 8%;
 }
 
 .midSectionImages > div:nth-child(1) {
-  width: 62%;
+  width: 65%;
+  /* border: 1px solid red */
 }
 .leftMidSectionImages > img {
   width: 100%;
@@ -44,10 +45,15 @@
   font-weight: bold;
 }
 .rightSideDiv {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   margin-top: 3%;
-  width: 100%;
+  width: 70%;
   height: auto;
   border: 1px solid rgb(185, 183, 181);
+}
+
+.rightSideDiv:hover{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .rightSideDiv > img {
   width: 100%;
@@ -63,7 +69,8 @@
   font-weight: bold;
   font-size: 28px;
   margin-top: 8%;
-  width: 85%;
+  width: 100%;
+  text-align: left;
   line-height: 40px;
   margin-bottom: 2%;
 }
