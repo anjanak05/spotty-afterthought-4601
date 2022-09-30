@@ -15,6 +15,7 @@
 }
 .TopSectionSingleProductPage > div:nth-child(1) > iframe {
   width: 100%;
+  height: 630px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,6 +41,7 @@
   margin-bottom: 15px;
   font-weight: bold;
   font-size: 42px;
+  line-height: 130%;
   letter-spacing: 1.5px;
   width: 90%;
 }
@@ -83,8 +85,8 @@
     border:1px solid rgb(195, 194, 194);
     display: flex;
     font-size: 18px;
-    padding: 15px 30px;
-    margin-top: 4%;
+    padding: 20px 30px;
+    margin-top: 5%;
     color: black;
     font-weight: bold;
 }
@@ -92,8 +94,40 @@
 .socialMediaIcons{
     width: 23%;
     height: 40px;
-    margin-top: 4.5%;
+    margin-top: 6%;
     font-size: 35px;
     color: rgb(103, 101, 101);
     justify-content: space-between;
+}
+
+.smallImages{
+  border-bottom: 2px solid rgb(177, 177, 178);
+  display: flex;
+  padding-left: 16%;
+  gap: 8px;
+  margin-top: 1%;
+  padding-bottom: 2.5%;
+}
+
+.smallImages>img{
+  width: 4%;
+  height:50px;
+}
+
+/* <--------------------------------------------------------------Top Section Css Ends Here---------------------------------> */
+/* <---------------------------------------------mid section Starting css----------------------------------------------> */
+
+.storyTitleSection{
+  display: flex;
+  padding-left: 2%;
+}
+.storyTitleSection>p{
+  padding-left: 2%;
+  font-size: 20px;
+  padding-top: 3%;
+  margin-bottom: 3%;
+}
+
+.storyTitleSection>p:active{
+  font-weight: bold;
 }
