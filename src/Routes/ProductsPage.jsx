@@ -173,7 +173,11 @@ const ProductsPage = () => {
                             <Wrap spacing="10px">
                                  <WrapItem>
                                  <Box key={elem.id}   border="1px solid #e1e1e1" textAlign="left"  >
+
+                               
+
                                <Link to={`/SingleProductPage/${elem.id}`}>
+
                                  <Image src={elem.cover} w="100%"/>
                                  <Box padding={"20px"}>
                                    <Box mb={"10px"}>
