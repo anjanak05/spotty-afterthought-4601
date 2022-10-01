@@ -5,7 +5,7 @@ import Login from './Login';
 import PaymentPage from './PaymentPage';
 import ProductsPage from './ProductsPage';
 import SingleProductPage from './SingleProductPage';
-import SingleProductCard from "../Components/SingleProductCard"
+
 
 import Signup from './Signup';
 import Home from './Home';
@@ -20,7 +20,7 @@ const MainRoute = () => {
         <Route path='/Signup' element={<Signup></Signup>}></Route>
         <Route path='/PaymentPage' element={<PaymentPage></PaymentPage>}></Route>
         <Route path='/CheckoutPage' element={<CheckoutPage></CheckoutPage>}></Route>
-        <Route path='/SingleProductCard' element={<SingleProductCard></SingleProductCard>}></Route>
+       
     </Routes>
   )
 }

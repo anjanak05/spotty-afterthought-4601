@@ -6,6 +6,7 @@ import styles from '../Styles/SingleProductPage.module.css';
 import { BsHeart } from 'react-icons/bs';
 import { FaFacebookSquare, FaTwitter, FaLink} from 'react-icons/fa'; 
 import {getAudioProjectData} from "../Redux/productPageReducer/action" 
+import SingleProductSection from '../Components/SingleProductMidSection';
 
 const SingleProductPage = () => {
   const { id } = useParams();
@@ -28,6 +29,7 @@ console.log(productData)
     }
   }, [productData, id]);
 
+ 
   return (
     <div id={styles.singleProductPageContainer}>
       <div className={styles.TopSectionSingleProductPage}>
@@ -91,6 +93,24 @@ console.log(productData)
           </div>
         </div>
       </div>
+      <div className={styles.smallImages}>
+<img 
+src="https://i3.ytimg.com/vi/EHrePiN5yeM/default.jpg" alt="" /><img 
+src="https://i3.ytimg.com/vi/Q4vqNmhZJzg/default.jpg" alt="" /><img 
+src="https://i3.ytimg.com/vi/Xa-Ziv7BEIo/default.jpg" alt="" /><img 
+src="https://i3.ytimg.com/vi/jHJvky7YmxI/default.jpg" alt="" /><img 
+src="https://i3.ytimg.com/vi/VHHSs1XMFhE/default.jpg" alt="" />
+      </div>
+{/* <----------------------------------Top Section Endes Here------------------------------------------------> */}
+{/* <------------------------------------Story Section Starting---------------------------------------------> */}
+    <div className={styles.storyTitleSection}>
+      <p >STORY</p>
+      <p>FAQ</p>
+      <p>UPDATES</p>
+      <p>DISCUSSION</p>
+
+    </div>
+    <SingleProductSection id={id}></SingleProductSection>
     </div>
   );
 };
