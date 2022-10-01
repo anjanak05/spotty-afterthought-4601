@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import "./imageTiles.css"
 
 export const ImageTiles = () => {
@@ -153,7 +154,7 @@ export const ImageTiles = () => {
             <div className='findContainer'>
                 <div className='jamtaraClever'>Clever Things For Curious Humans </div>
                 <p className='indeigo_text_1'>There.s no better place to start the hunt for something new and special. Began on Indiegogo to find clever and <br /> unconvential things that solve everyday problems large and small.</p>
-                <button className='signUp_button'>SIGN UP NOW</button>
+                <Link to='/Login'><button className='signUp_button'>SIGN UP NOW</button></Link>
                 <button className='learn_button'>LEARN MORE</button>
             </div>
         </div>
