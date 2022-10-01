@@ -8,11 +8,12 @@ import {
     AccordionIcon,
     Box
   } from '@chakra-ui/react' 
+  import style from "../Styles/ProductsPage.module.css"
 
 const AccordionComponent = () => {
   return (
-    <div allowToggle>
-    <Accordion allowToggle  defaultIndex={0}>
+    <div allowToggle >
+    <Accordion allowToggle  defaultIndex={0} >
             <AccordionItem>
                 <h2>
                 <AccordionButton >
@@ -22,19 +23,19 @@ const AccordionComponent = () => {
                     <AccordionIcon />
                 </AccordionButton>
                 </h2>
-                <AccordionPanel pb={4} pl={10} lineHeight={2.2}>
+                <AccordionPanel pb={4} pl={10}>
                    <h2 style={{color:"#e51075"}}>Audio</h2>
-                   <h2>Camera Gear</h2>
-                   <h2>Education</h2>
-                   <h2>Energy & Green Tech</h2>
-                   <h2>Fashion & Wearables</h2>
-                   <h2>Food & Beverages</h2>
-                   <h2>Health & Fitness</h2>
-                   <h2>Home</h2>
-                   <h2>Phones & Accessories</h2>
-                   <h2>Productivity</h2>
-                   <h2>Transportation</h2>
-                   <h2>Travel & Outdoors</h2>
+                   <h2 style={{marginTop:"15px"}}>Camera Gear</h2>
+                   <h2 style={{marginTop:"15px"}}>Education</h2>
+                   <h2 style={{marginTop:"15px"}}>Energy & Green Tech</h2>
+                   <h2 style={{marginTop:"15px"}}>Fashion & Wearables</h2>
+                   <h2 style={{marginTop:"15px"}}>Food & Beverages</h2>
+                   <h2 style={{marginTop:"15px"}}>Health & Fitness</h2>
+                   <h2 style={{marginTop:"15px"}}>Home</h2>
+                   <h2 style={{marginTop:"15px"}}>Phones & Accessories</h2>
+                   <h2 style={{marginTop:"15px"}}>Productivity</h2>
+                   <h2 style={{marginTop:"15px"}}>Transportation</h2>
+                   <h2 style={{marginTop:"15px"}}>Travel & Outdoors</h2>
                 </AccordionPanel>
             </AccordionItem>
 
@@ -48,17 +49,17 @@ const AccordionComponent = () => {
                 </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4} pl={10} lineHeight={2.2}>
-                    <h2>Art</h2>
-                    <h2>Comics</h2>
-                    <h2>Dance & Theater</h2>
-                    <h2>Film</h2>
-                    <h2>Music</h2>
-                    <h2>Photography</h2>
-                    <h2>Podcasts, Blogs & Vlogs</h2>
-                    <h2>Tabletop Games</h2>
-                    <h2>Video Games</h2>
-                    <h2>Web Series & TV Shows</h2>
-                    <h2>Writing & Publishing</h2>
+                    <h2 style={{marginTop:"15px"}}>Art</h2>
+                    <h2 style={{marginTop:"15px"}}>Comics</h2>
+                    <h2 style={{marginTop:"15px"}}>Dance & Theater</h2>
+                    <h2 style={{marginTop:"15px"}}>Film</h2>
+                    <h2 style={{marginTop:"15px"}}>Music</h2>
+                    <h2 style={{marginTop:"15px"}}>Photography</h2>
+                    <h2 style={{marginTop:"15px"}}>Podcasts, Blogs & Vlogs</h2>
+                    <h2 style={{marginTop:"15px"}}>Tabletop Games</h2>
+                    <h2 style={{marginTop:"15px"}}>Video Games</h2>
+                    <h2 style={{marginTop:"15px"}}>Web Series & TV Shows</h2>
+                    <h2 style={{marginTop:"15px"}}>Writing & Publishing</h2>
                 </AccordionPanel>
             </AccordionItem>
 
@@ -72,11 +73,11 @@ const AccordionComponent = () => {
                 </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4} pl={10} lineHeight={2.2}>
-                    <h2>Culture</h2>
-                    <h2>Environment</h2>   
-                    <h2>Human Rights</h2>
-                    <h2>Local Businesses</h2>
-                    <h2>Wellness</h2>
+                    <h2 style={{marginTop:"15px"}}>Culture</h2>
+                    <h2 style={{marginTop:"15px"}}>Environment</h2>   
+                    <h2 style={{marginTop:"15px"}}>Human Rights</h2>
+                    <h2 style={{marginTop:"15px"}}>Local Businesses</h2>
+                    <h2 style={{marginTop:"15px"}}>Wellness</h2>
                 </AccordionPanel>
             </AccordionItem>
     </Accordion>
