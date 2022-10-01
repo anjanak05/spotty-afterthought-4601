@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   Flex,
   Box,
@@ -15,9 +15,38 @@ import {
   useColorModeValue,
   Checkbox,
 } from '@chakra-ui/react';
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { register } from '../Redux/authReducer/action';
 
 const Singup = () => {
+  const [email,setEmail]= useState("");
+  const [password,setPassword] = useState("");
+  const [name,setName]= useState("")
+  const dispatch = useDispatch();
+  const navigate = useNavigate()
+  
+ 
+    let formData = {
+      name: name,
+      password: password,
+      email: email,
+      username: name,
+      mobile: "",
+      description: "A Transformation in education!",
+    };
+console.log(name,email,password)
+  const handleSubmit = (e)=>{
+    e.preventDefault();
+    if(email&&password){
+      dispatch(register(formData))
+      .then((r)=>{
+        alert("register successful")
+        navigate("/Login")
+      })
+      .catch((err)=>console.log(err))
+    }
+    }
   return (
     <div>
  <Flex
@@ -26,7 +55,13 @@ const Singup = () => {
         justify={'center'}
         bg={useColorModeValue('gray.50', 'gray.800')}>
         <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
-          <Stack align={'center'}>
+          
+          <Box
+            rounded={'lg'}
+            bg={useColorModeValue('white', 'gray.700')}
+            boxShadow={'lg'}
+            p={8}>
+              <Stack align={'center'}>
             <Heading fontSize={'4xl'} textAlign={'center'}>
              Welcome!
             </Heading>
@@ -34,17 +69,15 @@ const Singup = () => {
             Sign up to join Indiegogo.
             </Text>
           </Stack>
-          <Box
-            rounded={'lg'}
-            bg={useColorModeValue('white', 'gray.700')}
-            boxShadow={'lg'}
-            p={8}>
+              <form onSubmit={handleSubmit}>
             <Stack spacing={4}>
               <HStack>
                 <Box>
                   <FormControl id="firstName" isRequired>
                     <FormLabel>First Name</FormLabel>
-                    <Input placeholder='Your First Name' type="text" />
+                    <Input placeholder='Your First Name' type="text"  name="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)} />
                   </FormControl>
                 </Box>
                 <Box>
@@ -56,12 +89,13 @@ const Singup = () => {
               </HStack>
               <FormControl id="email" isRequired>
                 <FormLabel>Email address</FormLabel>
-                <Input placeholder='Your Email'  type="email" />
+                <Input placeholder='Your Email'  type="email" value={email} onChange={(e)=>setEmail(e.target.value)}/>
               </FormControl>
               <FormControl id="password" isRequired>
                 <FormLabel>Password</FormLabel>
                 <InputGroup>
-                  <Input placeholder='Password' type="password" />
+                  <Input placeholder='Password' type="password"  value={password} 
+                    onChange={(e)=>setPassword(e.target.value)}/>
                 </InputGroup>
 
                 <Checkbox marginTop="5px" fontSize="5px" defaultChecked>Sign me up for the Indiegogo newsletter </Checkbox>
@@ -70,8 +104,8 @@ const Singup = () => {
 
               </FormControl>
               <Stack spacing={2} alignContent="center">
-              <Link to="/">
                 <Button
+                type='submit'
                 borderRadius="none"
                   loadingText="Submitting"
                   width="500px"
@@ -83,7 +117,6 @@ const Singup = () => {
                   }}>
                   Create Account
                 </Button>
-                </Link>
                 <p style={{marginLeft:"220px"}}>Or</p>
                 <Button
                 borderRadius="none"
@@ -106,6 +139,7 @@ const Singup = () => {
                 </Text>
               </Stack>
             </Stack>
+            </form>
           </Box>
         </Stack>
       </Flex>
