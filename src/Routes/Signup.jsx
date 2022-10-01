@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import axios from "axios"
 import {
   Flex,
   Box,
@@ -27,25 +28,23 @@ const Singup = () => {
   const navigate = useNavigate()
   
  
+  const handleSubmit = (e)=>{
+    e.preventDefault();
     let formData = {
       name: name,
       password: password,
       email: email,
       username: name,
-      mobile: "",
+      mobile: "7894561237",
       description: "A Transformation in education!",
     };
-console.log(name,email,password)
-  const handleSubmit = (e)=>{
-    e.preventDefault();
-    if(email&&password){
-      dispatch(register(formData))
-      .then((r)=>{
-        alert("register successful")
-        navigate("/Login")
+    return axios
+      .post(`https://masai-api-mocker.herokuapp.com/auth/register`, formData)
+      .then((res) => {
+        alert("Registrations successfully!");
+        navigate("/Login");
       })
-      .catch((err)=>console.log(err))
-    }
+      .catch((error) => console.log(error));
     }
   return (
     <div>

@@ -13,6 +13,7 @@ const SingleProductPage = () => {
   const [singlProductData, setSingleProductData] = useState({});
   const productData = useSelector(state => state.productPageReducer.audioProjects);
   const dispatch = useDispatch();
+
 console.log(productData)
   useEffect(() => {
     if (productData.length === 0) {
