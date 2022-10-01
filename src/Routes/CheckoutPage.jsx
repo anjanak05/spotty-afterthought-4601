@@ -1,9 +1,21 @@
-import { Radio } from '@chakra-ui/react'
+import { Radio, useDisclosure } from '@chakra-ui/react'
 import React from 'react'
 import styles from "../Styles/CheckoutPage.module.css"
-
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  Button,
+  Lorem,
+} from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
 
 const CheckoutPage = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <div>
         <div className={styles.mainContainerR}>
@@ -95,6 +107,29 @@ const CheckoutPage = () => {
 
               <div>
                 <button className={styles.payoff_submitButton}>Submit Payment</button>
+
+              <Button onClick={onOpen} className={styles.payoff_submitButton}>Submit Payment</Button>
+              <Modal isOpen={isOpen} onClose={onClose}>
+               <ModalOverlay />
+               <ModalContent>
+          
+            <ModalHeader>Payment SucessFul</ModalHeader>
+            <ModalHeader>Thank You</ModalHeader>
+            <ModalCloseButton />
+              <ModalBody>
+              {/* <Lorem count={2} /> */}
+             </ModalBody>
+
+              <ModalFooter>
+                <Link to='/'>
+                <Button colorScheme='blue' mr={3} onClick={onClose}>
+                  Close
+                </Button>
+                </Link>
+                {/* <Button variant='ghost'>Secondary Action</Button> */}
+              </ModalFooter>
+            </ModalContent>
+          </Modal>
               </div>
 
             </div>

@@ -4,7 +4,7 @@ const iniState = {
   isAuth:false,
   isLoading:false,
   isError:false,
-  token:""
+  data:{}
 };
 export const reducer = (state = iniState, action) => {
   const { type, payload } = action;
@@ -19,7 +19,7 @@ export const reducer = (state = iniState, action) => {
           return {
               ...iniState,
               isLoading:false,
-              token:payload,
+              data:payload,
               isAuth:true
           } 
    
@@ -28,9 +28,30 @@ export const reducer = (state = iniState, action) => {
                   ...iniState,
                   isLoading:false,
                   isAuth:false,
-                  token:""
-      
-              } 
+                  data:{}
+              }
+              case types.USER_SIGNUP_REQUEST:
+              return {
+                  ...iniState,
+                  isLoading:false,
+                  isAuth:false,
+              }
+              case types.USER_SIGNUP_SUCCESS:
+              return {
+                  ...iniState,
+                  isLoading:false,
+                  isAuth:true,
+              }
+              case types.USER_SIGNUP_FAILURE:
+              return {
+                  ...iniState,
+                  isLoading:false,
+                  isError:true,
+                  isAuth:false,
+                  data:{}
+              }
+
+
     default:
       return state;
   }

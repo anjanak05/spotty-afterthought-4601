@@ -20,19 +20,22 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const handleShowClick = () => setShowPassword(!showPassword);
-  const [email,setEmail]= useState("eve.holt@reqres.in");
-  const [password,setPassword] = useState();
+  const [email,setEmail]= useState("");
+  const [password,setPassword] = useState("");
   const dispatch = useDispatch();
-  const navigate = useNavigate()
-
+const navigate = useNavigate()
 
   const handleSubmit = (e)=>{
     e.preventDefault();
+    let loginData = {
+      username:email,
+      password:password
+    }
+    let loggeduser = loginData.username
     if(email&&password){
-      dispatch(login({email,password}))
-      .then((r)=>{
-        navigate("/")
-      })
+      dispatch(login(loginData))
+      .then((r)=>navigate("/", {state:loggeduser}))
+      
     }
     }
 
@@ -58,7 +61,7 @@ const Login = () => {
     
           <form onSubmit={handleSubmit} >
             <Stack
-              spacing={10}
+              spacing={4}
               p="1rem"
               backgroundColor="whiteAlpha.900"
               boxShadow="md"
@@ -70,7 +73,7 @@ const Login = () => {
 
                 <InputGroup>
                 
-                  <Input type="email" placeholder="Your Email"  value={email} onChange={(e)=>setEmail(e.target.value)} />
+                  <Input type="text" placeholder="Your Email"  value={email} onChange={(e)=>setEmail(e.target.value)} />
                 </InputGroup>
               </FormControl>
               <FormControl>
