@@ -17,14 +17,10 @@ import {
   Checkbox,
 } from '@chakra-ui/react';
 import {Link, useNavigate} from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { register } from '../Redux/authReducer/action';
-
 const Singup = () => {
   const [email,setEmail]= useState("");
   const [password,setPassword] = useState("");
   const [name,setName]= useState("")
-  const dispatch = useDispatch();
   const navigate = useNavigate()
   
  
