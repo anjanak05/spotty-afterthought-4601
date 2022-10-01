@@ -6,6 +6,7 @@ import { getAudioProjectData,handleFilterAudio,handleSort,filterAudioData,sortAu
 import { useEffect,useState } from "react"
 //import { BiSearch } from 'react-icons/bi'
 import AccordionComponenent from "../Components/AccordionComponent"
+
 import {
     Drawer,
     DrawerBody,
@@ -110,29 +111,29 @@ const ProductsPage = () => {
             <Text fontSize='3xl' color="white" pt="2px">Life in hi-hi</Text>
             </Center>
          </Box>
-         <Box display="flex" w="80%" m="auto" >
-              <Box w="20%" pr="20px" textAlign="left" mt="80px" >
-                   <h2>Filter Results</h2>
-                   <h3>CATEGORY</h3>
-                   <h4>All Categories</h4>
-                 <AccordionComponenent />
-                 <h1>PROJECT TIMING</h1>
-                 <br />
-                 <div  onChange = {handleFilterAudio}>
-                           <div>
-                               <input type={"radio"} value="All" name='a'/>
-                               <label>All</label>
-                           </div>
-                           <div>
-                               <input type={"radio"} value="Launching soon" name='a' />
-                               <label>Launching soon</label>
-                           </div>
-                           <div>
-                               <input type={"radio"} value="Just Launched" name='a'/>
-                               <label>Just Launched</label>
-                           </div>      
-                 </div>
-              </Box>
+         <Box  style={{width:"80%",margin:"auto",display:"flex"}}>
+             <div style={{width:"25%",textAlign:"left",paddingRight:"20px"}}>
+                  <h2 style={{marginTop:"45px",fontSize:"18px",fontWeight:"550"}}>Filter Results</h2>
+                  <h3  style={{marginTop:"20px",fontSize:"15px",fontWeight:"550",color:"gray"}}>CATEGORY</h3>
+                  <h4 style={{padding:"10px",marginTop:"20px",fontSize:"15px"}}>All Categories</h4>
+                <AccordionComponenent />
+                <h1  style={{marginTop:"20px",fontSize:"15px",fontWeight:"550",color:"gray"}}>PROJECT TIMING</h1>
+                <hr />
+                <div style={{marginTop:"20px"}} onChange = {handleFilterAudio}>
+                          <div style={{padding:"10px"}}>
+                              <input type={"radio"} value="All" name='a'/>
+                              <label  style={{paddingLeft:"8px"}}>All</label>
+                          </div>
+                          <div style={{padding:"10px"}}>
+                              <input type={"radio"} value="Launching soon" name='a' />
+                              <label style={{paddingLeft:"8px"}}>Launching soon</label>
+                          </div>
+                          <div style={{padding:"10px"}}>
+                              <input type={"radio"} value="Just Launched" name='a'/>
+                              <label  style={{paddingLeft:"8px"}}>Just Launched</label>
+                          </div>      
+                </div>
+             </div>
               <div style={{width:"100%"}} >
                   <Box mt={"50px"}>
                       <Stack>
@@ -145,25 +146,25 @@ const ProductsPage = () => {
                          </InputGroup>
                       </Stack>
                   </Box>
-                  <hr />
-                  <Box mt={"40px"} mb="20px" >
-                      <Flex justifyContent={"end"} gap="10px" alignItems={"center"}>
-                           <Box >
-                              <Select w={"120px"} borderRadius="0" onChange={handleFilterAudio}>
-                                 <option value='All'>All</option> 
-                                 <option value='Launching soon'>Launching soon</option>
-                                 <option value='Just Launched'>Just Launched</option>
-                               </Select>
-                           </Box>
-                           <Box>
-                               <Select w={"120px"} borderRadius="0" onChange={handleSort}>
-                                 <option value=''>Sort by</option> 
-                                 <option value='asc'>Trending</option>
-                                 <option value='desc'>Most Funded</option>
-                               </Select>
-                           </Box>   
-                      </Flex>
-                  </Box>
+                  <hr  style={{marginTop:"40px"}} />
+                 <Box mt={"40px"} mb="20px">
+                     <Flex justifyContent={"end"} gap="10px" alignItems={"center"}>
+                          <Box  style={{display:"block"}}>
+                             <Select w={"120px"} borderRadius="0" onChange={handleFilterAudio}>
+                                <option value='All'>All</option> 
+                                <option value='Launching soon'>Launching soon</option>
+                                <option value='Just Launched'>Just Launched</option>
+                              </Select>
+                          </Box>
+                          <Box>
+                              <Select w={"120px"} borderRadius="0" onChange={handleSort}>
+                                <option value=''>Sort by</option> 
+                                <option value='asc'>Trending</option>
+                                <option value='desc'>Most Funded</option>
+                              </Select>
+                          </Box>   
+                     </Flex>
+                 </Box>
                   <SimpleGrid minChildWidth="230px"  spacing="40px" >
                          
                         {   
