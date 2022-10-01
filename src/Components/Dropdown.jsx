@@ -1,5 +1,5 @@
 
-import React, {useState} from "react";
+import React, {useState,useEffect} from "react";
 import { NavLink } from "react-router-dom";
 import { Box, Image,Center,SimpleGrid,Text,Heading } from "@chakra-ui/react";
 
@@ -12,10 +12,26 @@ const Dropdown = () => {
     // const handle = () => {
     //   setS(!set)
     // }
+    //----------------------------------------------------------responsive sizes--------------------------------
+
+    const [isDesktop, setDesktop] = useState(window.innerWidth > 800);
+
+    const updateMedia = () => {
+      setDesktop(window.innerWidth > 800);
+    };
+  
+    useEffect(() => {
+      window.addEventListener("resize", updateMedia);
+      return () => window.removeEventListener("resize", updateMedia);
+    });
   
   return (
     
-    <Box style={{ marginBottom: "5px", borderTop: "1px solid black" }}  >
+ <div>
+    {
+        isDesktop?(
+            <div>
+                 <Box style={{ marginBottom: "5px", borderTop: "1px solid black" }}  >
       <Center>
       <Box style={{display:"flex",gap:"30px",padding:"20px"}}>
         <Box  height='80px'>
@@ -207,6 +223,88 @@ const Dropdown = () => {
       </div>
      </Center>
     </Box>
+                
+            </div>
+        ):(
+            <div>
+                 <Box style={{ marginBottom: "5px", borderTop: "1px solid black" }}  >
+   
+      
+     
+     <div>
+        <Box  style={{paddingLeft:"20px"}}>
+        
+          <div style={{marginTop:"20px",textAlign:"left"}}>
+            <NavLink to="/"   >
+              Home
+            </NavLink>  
+            <br/>
+            <hr style={{marginTop:"10px",marginLeft:"-20px"}}/>
+            <br/>
+            <NavLink to="/ProductsPage"   >
+              Explore
+            </NavLink>
+            <br/>
+            <hr style={{marginTop:"10px",marginLeft:"-20px"}}/>
+            <br/>
+            <NavLink to="/ProductsPage"   >
+            What We Do
+            </NavLink>
+            <br/>
+            <hr style={{marginTop:"10px",marginLeft:"-20px"}}/>
+            <br/>
+            <NavLink to="/ProductsPage"   >
+             For Entrepreneurs
+            </NavLink>
+            <br/>
+            <hr style={{marginTop:"10px",marginLeft:"-20px"}}/>
+            <br/>
+            <NavLink to="/ProductsPage"   >
+             Start a Campaign
+            </NavLink>
+            <br/>
+            <hr style={{marginTop:"10px",marginLeft:"-20px"}}/>
+            <br/>
+            <NavLink to="/ProductsPage"   >
+            My Campaigns
+            </NavLink>
+            <br/>
+            <hr style={{marginTop:"10px",marginLeft:"-20px"}}/>
+            <br/>
+            <NavLink to="/ProductsPage"   >
+            My Conributions
+            </NavLink>
+            <br/>
+            <hr style={{marginTop:"10px",marginLeft:"-20px"}}/>
+            <br/>
+            <NavLink to="/ProductsPage"   >
+           Settings
+            </NavLink>
+            <br/>
+            <hr style={{marginTop:"10px",marginLeft:"-20px"}}/>
+            <br/>
+            <NavLink to="/ProductsPage"   >
+            My Campaigns
+            </NavLink>
+            <br/>
+            <hr style={{marginTop:"10px",marginLeft:"-20px"}}/>
+            <br/>
+            <NavLink to="/ProductsPage"   >
+            Log Out
+            </NavLink>
+            <br/><br/>
+          </div>
+         
+        </Box>
+      
+      
+      </div>
+   
+    </Box>
+            </div>
+        )
+    }
+ </div>
   )
 }
 
