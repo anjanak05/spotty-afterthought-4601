@@ -12,9 +12,10 @@ import {
   Checkbox,
   Button,
 } from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
-
+import { Link, useLocation } from 'react-router-dom';
 const Footer = () => {
+  const location = useLocation()
+console.log(location)
   return (
     <div>
       <Box fontSize="sm" bg={useColorModeValue('#F5F5F5', 'gray.900')}>
@@ -23,6 +24,7 @@ const Footer = () => {
             <Stack align={'flex-start'}>
               <Heading color="gray.600" fontSize="md" fontWeight="semibold">
                 EXPLORE
+                
               </Heading>
               <Link href={'#'}>What we do</Link>
               <Link href={'#'}>Funding</Link>
@@ -70,7 +72,10 @@ const Footer = () => {
                   bg: 'whiteAlpha.300',
                 }}
               />
-              <Checkbox fontSize="small" marginTop="10px">
+              <Heading fontWeight="medium" fontSize="small" marginTop="10px">
+          
+              <Checkbox ml="2px" border="1px gray" backgroundColor="gray.200" >
+                </Checkbox>
                 I agree to the{' '}
                 <Link
                   style={{
@@ -93,7 +98,7 @@ const Footer = () => {
                   {' '}
                   Privacy Policy
                 </Link>
-              </Checkbox>
+              </Heading>
               <Link to="/Signup">
                 <Button
                   borderRadius="none"
@@ -113,6 +118,7 @@ const Footer = () => {
               </Link>
             </VStack>
           </SimpleGrid>
+          <Heading fontSize="smaller">BsSpotifyBsSpotifyBsSpotifyBsSpotifyBsSpotifyBsSpotifyBsSpotifyBsSpotifyBsSpotify</Heading>
         </Container>
 
         <Box
