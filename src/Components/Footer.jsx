@@ -1,11 +1,10 @@
-import React from 'react'
+import React from 'react';
 import {
   Box,
   Container,
   Stack,
   SimpleGrid,
   Text,
-  Link,
   useColorModeValue,
   Input,
   VStack,
@@ -13,69 +12,91 @@ import {
   Checkbox,
   Button,
 } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
+
 const Footer = () => {
-  
   return (
     <div>
-       <Box fontSize="sm"
-      bg={useColorModeValue('#F5F5F5', 'gray.900')}>
-      <Container as={Stack} maxW={'6xl'} py={4}>
-        <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} >
-          <Stack align={'flex-start'}>
-          <Heading color="gray.600" fontSize="md" fontWeight="semibold">
-             EXPLORE
-            </Heading>
-            <Link  href={'#'}>What we do</Link>
-            <Link  href={'#'}>Funding</Link>
-          </Stack>
+      <Box fontSize="sm" bg={useColorModeValue('#F5F5F5', 'gray.900')}>
+        <Container as={Stack} maxW={'6xl'} py={4}>
+          <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }}>
+            <Stack align={'flex-start'}>
+              <Heading color="gray.600" fontSize="md" fontWeight="semibold">
+                EXPLORE
+              </Heading>
+              <Link href={'#'}>What we do</Link>
+              <Link href={'#'}>Funding</Link>
+            </Stack>
 
-          <Stack align={'flex-start'}>
-          <Heading color="gray.600" fontSize="md" fontWeight="semibold">
-             ABOUT
-            </Heading>
-            <Link  href={'#'}>About us</Link>
-            <Link href={'#'}>Blog</Link>
-            <Link href={'#'}>Trust & Safety</Link>
-            <Link href={'#'}>Help & Support</Link>
-            <Link href={'#'}>Press</Link>
-            <Link href={'#'}>Careers</Link>
-            <Link href={'#'}>Contact</Link>
-          </Stack>
+            <Stack align={'flex-start'}>
+              <Heading color="gray.600" fontSize="md" fontWeight="semibold">
+                ABOUT
+              </Heading>
+              <Link href={'#'}>About us</Link>
+              <Link href={'#'}>Blog</Link>
+              <Link href={'#'}>Trust & Safety</Link>
+              <Link href={'#'}>Help & Support</Link>
+              <Link href={'#'}>Press</Link>
+              <Link href={'#'}>Careers</Link>
+              <Link href={'#'}>Contact</Link>
+            </Stack>
 
-          <Stack align={'flex-start'}>
-           <Heading color="gray.600" fontSize="md" fontWeight="semibold">
-             ENTREPRENEURS
-            </Heading>
-            <Link  href={'#'}>How It Works</Link>
-            <Link  href={'#'}>Indiegogo vs. Kickstarter</Link>
-            <Link  href={'#'}>Education Center</Link>
-            <Link  href={'#'}>Experts Directory</Link>
-            <Link  href={'#'}>Fees</Link>
-            <Link  href={'#'}>Enterprise</Link>
-            <Link  href={'#'}> China</Link>
-          </Stack>
-          <VStack>
-            
-          <Heading fontSize="md">
-            Find it first on Indiegogo
-            </Heading>
-            <Heading marginBottom="2rem" fontSize="20px" fontWeight="normal">Discover new and clever products in the Indiegogo newsletter</Heading>
-            <br/>
-            <br/>
-           
-              <Input marginTop="10px"
+            <Stack align={'flex-start'}>
+              <Heading color="gray.600" fontSize="md" fontWeight="semibold">
+                ENTREPRENEURS
+              </Heading>
+              <Link href={'#'}>How It Works</Link>
+              <Link href={'#'}>Indiegogo vs. Kickstarter</Link>
+              <Link href={'#'}>Education Center</Link>
+              <Link href={'#'}>Experts Directory</Link>
+              <Link href={'#'}>Fees</Link>
+              <Link href={'#'}>Enterprise</Link>
+              <Link href={'#'}> China</Link>
+            </Stack>
+            <VStack>
+              <Heading fontSize="md">Find it first on Indiegogo</Heading>
+              <Heading marginBottom="2rem" fontSize="20px" fontWeight="normal">
+                Discover new and clever products in the Indiegogo newsletter
+              </Heading>
+              <br />
+              <br />
+
+              <Input
+                marginTop="10px"
                 placeholder="Your Email Address"
                 backgroundColor="white"
-                border= "1px solid black"
+                border="1px solid black"
                 _focus={{
                   bg: 'whiteAlpha.300',
                 }}
-                />
-                 <Checkbox  fontSize="small" marginTop="10px" >I agree to the <Link style={{color:"#CF0C67", textDecoration:"underline" , fontWeight:"semibold" }}> Terms of Use</Link> and have read and understand the <Link style={{color:"#CF0C67", textDecoration:"underline",fontWeight:"semibold"}}> Privacy Policy</Link>
-</Checkbox>
-<Link to="/">
+              />
+              <Checkbox fontSize="small" marginTop="10px">
+                I agree to the{' '}
+                <Link
+                  style={{
+                    color: '#CF0C67',
+                    textDecoration: 'underline',
+                    fontWeight: 'semibold',
+                  }}
+                >
+                  {' '}
+                  Terms of Use
+                </Link>{' '}
+                and have read and understand the{' '}
+                <Link
+                  style={{
+                    color: '#CF0C67',
+                    textDecoration: 'underline',
+                    fontWeight: 'semibold',
+                  }}
+                >
+                  {' '}
+                  Privacy Policy
+                </Link>
+              </Checkbox>
+              <Link to="/Signup">
                 <Button
-                borderRadius="none"
+                  borderRadius="none"
                   loadingText="Submitting"
                   size="md"
                   fontSize="small"
@@ -85,39 +106,59 @@ const Footer = () => {
                   color={'white'}
                   _hover={{
                     bg: 'pink.600',
-                  }}>
-                   Sign Me Up
+                  }}
+                >
+                  Sign Me Up
                 </Button>
-                </Link>
-                </VStack>
-        </SimpleGrid>
-      </Container>
-      
-
-      <Box
-        borderTopWidth={1}
-        borderStyle={'solid'}
-        borderColor={useColorModeValue('gray.200', 'gray.700')}>
-        <Container
-          as={Stack}
-          maxW={'6xl'}
-          py={4}
-          fontSize="smaller"
-          direction={{ base: 'column', md: 'row' }}
-          spacing={4}
-          justify={{ md: 'center' }}
-          align={{ md: 'center' }}>
-          <Text> <Link> Terms of Use</Link> </Text>
-          <Text> <Link> Privacy Policy</Link> </Text>
-          <Text> <Link> Cookie Policy</Link> </Text>
-          <Text> <Link> Do Not Sell My Personal Information</Link> </Text>
-          <Text> <Link> Accessibility</Link> </Text>
-          <Text> <Link>© 2022 Indiegogo, Inc. All Rights Reserved</Link> </Text>
+              </Link>
+            </VStack>
+          </SimpleGrid>
         </Container>
-      </Box>
-    </Box>
-    </div>
-  )
-}
 
-export default Footer
+        <Box
+          borderTopWidth={1}
+          borderStyle={'solid'}
+          borderColor={useColorModeValue('gray.200', 'gray.700')}
+        >
+          <Container
+            as={Stack}
+            maxW={'6xl'}
+            py={4}
+            fontSize="smaller"
+            direction={{ base: 'column', md: 'row' }}
+            spacing={4}
+            justify={{ md: 'center' }}
+            align={{ md: 'center' }}
+          >
+            <Text>
+              {' '}
+              <Link> Terms of Use</Link>{' '}
+            </Text>
+            <Text>
+              {' '}
+              <Link> Privacy Policy</Link>{' '}
+            </Text>
+            <Text>
+              {' '}
+              <Link> Cookie Policy</Link>{' '}
+            </Text>
+            <Text>
+              {' '}
+              <Link> Do Not Sell My Personal Information</Link>{' '}
+            </Text>
+            <Text>
+              {' '}
+              <Link> Accessibility</Link>{' '}
+            </Text>
+            <Text>
+              {' '}
+              <Link>© 2022 Indiegogo, Inc. All Rights Reserved</Link>{' '}
+            </Text>
+          </Container>
+        </Box>
+      </Box>
+    </div>
+  );
+};
+
+export default Footer;

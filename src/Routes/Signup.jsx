@@ -19,7 +19,7 @@ import {Link} from 'react-router-dom'
 
 const Singup = () => {
   return (
-    <div>Singup
+    <div>
  <Flex
         minH={'100vh'}
         align={'center'}
