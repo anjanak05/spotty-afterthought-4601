@@ -19,7 +19,7 @@ const MainRoute = () => {
         <Route path='/SingleProductPage/:id' element={<SingleProductPage></SingleProductPage>}></Route>
         <Route path='/Login' element={<Login></Login>}></Route>
         <Route path='/Signup' element={<Signup></Signup>}></Route>
-        <Route path='/PaymentPage' element={<PrivateRoute><PaymentPage></PaymentPage></PrivateRoute>}></Route>
+        <Route path='/PaymentPage' element={<PaymentPage></PaymentPage>}></Route>
         <Route path='/CheckoutPage' element={<CheckoutPage></CheckoutPage>}></Route>
        
     </Routes>
