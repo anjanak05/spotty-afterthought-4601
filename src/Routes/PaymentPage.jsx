@@ -4,19 +4,17 @@ import styles from '../Styles/PaymentPage.module.css';
 import { FaAngleLeft } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { Heading, useDisclosure } from '@chakra-ui/react';
+import {  Button, Text, useDisclosure } from '@chakra-ui/react';
 import { AiFillLock } from 'react-icons/ai';
 import { BsTriangle } from 'react-icons/bs';
 import {
   Modal,
   ModalOverlay,
-  ModalContent,
+   ModalContent,
   ModalHeader,
   ModalFooter,
   ModalBody,
   ModalCloseButton,
-  Button,
-  Lorem,
 } from '@chakra-ui/react'
 
 const PaymentPage = () => {
@@ -25,7 +23,9 @@ const PaymentPage = () => {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const { isOpen, onOpen, onClose } = useDisclosure();
-  
+
+
+
  console.log(location);
   const handleBack = () => {
     navigate(-1);
@@ -34,7 +34,7 @@ const PaymentPage = () => {
     navigate('/Login');
   };
 
-  const handleCheckoutNavigate=()=>{
+  const handlePaymentButton=()=>{
     navigate('/CheckoutPage');
   }
   return (
@@ -293,29 +293,11 @@ const PaymentPage = () => {
             </span>
           </p>
         </div>
-        <Button onClick={onOpen} >
+        <Button onClick={handlePaymentButton} >
         <AiFillLock style={{marginTop:"2%", marginRight:"10px"}} />
           Submit Payment
           </Button>
-              <Modal isOpen={isOpen} onClose={onClose}>
-               <ModalOverlay />
-               <ModalContent>
-          
-            <ModalHeader>Payment SucessFul</ModalHeader>
-            <ModalHeader>Thank You</ModalHeader>
-            <ModalCloseButton />
-              <ModalBody>
-             </ModalBody>
-
-              <ModalFooter>
-                <Link to='/'>
-                <Button colorScheme='blue' mr={3} onClick={onClose}>
-                  Close
-                </Button>
-                </Link>
-              </ModalFooter>
-            </ModalContent>
-          </Modal>
+             
       </div>
     </div>
   );

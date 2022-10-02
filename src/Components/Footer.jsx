@@ -19,7 +19,7 @@ const Footer = () => {
 console.log(location)
   return (
     <div>
-      <br></br>
+      {/* <br></br> */}
       <Box  fontSize="sm" bg={useColorModeValue('#F5F5F5', 'gray.900')}>
         <Container as={Stack} maxW={'6xl'} py={4}>
           <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }}>

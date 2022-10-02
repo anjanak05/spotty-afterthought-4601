@@ -3,6 +3,7 @@
   border-Top: 1px solid rgb(192, 187, 187);
   display: flex;
   margin: auto;
+  /* margin-bottom: 5%; */
   /* padding-bottom: 7%; */
 }
 .paymentPageLeftSection {
@@ -19,6 +20,7 @@
   padding-top: 6%;
   padding-left: 3%;
   padding-right: 9%;
+  
   /* border: 1px solid rgb(102, 9, 189); */
 }
 #contriTitle {
