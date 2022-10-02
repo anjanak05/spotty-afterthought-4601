@@ -40,11 +40,12 @@ const navigate = useNavigate()
     }
 
   return (
-    <div>Login
+    <div>
 
 <Flex
       flexDirection="column"
       width="100%"
+      mt="10px"
       height="100%"
       backgroundColor="gray.200"
       justifyContent="center"
@@ -106,9 +107,8 @@ const navigate = useNavigate()
               >
                 Login
               </Button>
-              <h4>
+              <h4 style={{marginLeft:"200px"}}>
               or
-
               </h4>
               <Button
                 borderRadius={0}
@@ -120,11 +120,7 @@ const navigate = useNavigate()
               >
                 Continue with Facebook
               </Button>
-            </Stack>
-          </form>
-        </Box>
-      </Stack>
-      <Box>
+              <Box>
         New to Indiegogo?{" "}
         <Link style={{
           textDecoration:"underline"
@@ -132,6 +128,12 @@ const navigate = useNavigate()
           Sign Up
         </Link>
       </Box>
+            </Stack>
+            
+          </form>
+        </Box>
+      </Stack>
+      
     </Flex>
     </div>
   )
