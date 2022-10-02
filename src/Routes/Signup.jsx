@@ -41,6 +41,7 @@ const Singup = () => {
     return axios
       .post(`https://masai-api-mocker.herokuapp.com/auth/register`, formData)
       .then((res) => {
+        console.log(res)
         alert("Registrations successfully!");
         navigate("/Login");
       })
