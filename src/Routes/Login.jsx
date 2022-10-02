@@ -70,11 +70,11 @@ const navigate = useNavigate()
                   <Heading fontWeight="semibold" color="black">Welcome Back!</Heading>
         <h4>Login in to Continue</h4>
               <FormControl>
-              <label>Email</label>
+              <label>User ID</label>
 
                 <InputGroup>
                 
-                  <Input type="text" placeholder="Your Email"  value={email} onChange={(e)=>setEmail(e.target.value)} />
+                  <Input type="text" placeholder="Your User ID"  value={email} onChange={(e)=>setEmail(e.target.value)} />
                 </InputGroup>
               </FormControl>
               <FormControl>
