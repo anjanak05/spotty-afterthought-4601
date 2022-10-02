@@ -60,8 +60,8 @@ console.log(productData)
              
             ></img>
             <div>
-              <p className={styles.bold}>Olive Union</p>
-              <p>3 Campaigns | California, United States</p>
+              <p className={styles.bold}>{singlProductData.companyName}</p>
+              <p>{singlProductData.companyAddress}</p>
             </div>
           </div>
           <p className={styles.singleProductPageFund}>

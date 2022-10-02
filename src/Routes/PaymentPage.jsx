@@ -24,7 +24,8 @@ const PaymentPage = () => {
   const navigate = useNavigate();
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  
  console.log(location);
   const handleBack = () => {
     navigate(-1);
@@ -46,9 +47,9 @@ const PaymentPage = () => {
             <FaAngleLeft />
             <span
               style={{
-                marginTop: '-0.2%',
-                fontWeight: 'normal',
-                fontSize: '22px',
+                marginTop: '-0.5%',
+                fontWeight: '300',
+                fontSize: '17px',
               }}
             >
               Back
@@ -57,12 +58,12 @@ const PaymentPage = () => {
         </div>
 
         <p id={styles.createAccount}>
-          <span style={{ fontWeight: 'bold', marginRight: '2%' }}>
+          <span style={{ fontWeight: '500',  fontSize: '19px',marginRight: '4%' }}>
             {' '}
             Guest checkout
           </span>
           Have an account?{' '}
-          <span onClick={handleLoginPageRequest} style={{ color: 'purple' }}>
+          <span onClick={handleLoginPageRequest} style={{ color: '#8053a8' }}>
             <u>Log in</u>
           </span>
         </p>
@@ -97,30 +98,30 @@ const PaymentPage = () => {
           <input type="checkbox"></input>
           <p>Subscribe to the Indiegogo newsletter</p>
         </div>
-        <Heading as="h3" size="lg" marginBottom="4%" marginTop="4%">
+        <p className={styles.shippingAddresss} >
           {' '}
           Shipping address
-        </Heading>
+        </p>
 
         <div className={styles.shippingDetailse}>
           <div>
             <p>
               Full Name <span style={{ color: 'red' }}>*</span>
             </p>
-            <input type="text" required name="name" value=""></input>
+            <input type="text" required ></input>
           </div>
 
           <div>
             <p>
               Country <span style={{ color: 'red' }}>*</span>
             </p>
-            <input type="text" required name="name" value=""></input>
+            <input type="text" required placeholder='Type a shipping destination'></input>
           </div>
           <div>
             <p>
               City <span style={{ color: 'red' }}>*</span>
             </p>
-            <input type="text" required name="name" value=""></input>
+            <input type="text" required ></input>
           </div>
           <div className={styles.emailName}>
             <div>
@@ -130,9 +131,7 @@ const PaymentPage = () => {
               <input
                 type="text"
                 required
-                name="name"
-                value={fullName}
-                onChange={e => setFullName(e.target.value)}
+                
               ></input>
             </div>
             <div>
@@ -142,9 +141,7 @@ const PaymentPage = () => {
               <input
                 type="text"
                 required
-                name="email"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
+                
               ></input>
             </div>
           </div>
@@ -156,9 +153,7 @@ const PaymentPage = () => {
               <input
                 type="text"
                 required
-                name="name"
-                value={fullName}
-                onChange={e => setFullName(e.target.value)}
+                
               ></input>
             </div>
             <div>
@@ -168,23 +163,17 @@ const PaymentPage = () => {
               <input
                 type="text"
                 required
-                name="email"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
+                
               ></input>
             </div>
           </div>
         </div>
-        <Heading
-          as="h3"
-          size="lg"
-          marginBottom="4%"
-          marginTop="4%"
-          display="flex"
+        <p
+          className={styles.shippingAddresss} 
         >
           {' '}
-          Secure Payment < AiFillLock style={{marginTop:"0.5%", marginLeft:"10px"}} />
-        </Heading>
+          Secure Payment < AiFillLock style={{marginTop:"0.7%", marginLeft:"10px"}} />
+        </p>
         <div className={styles.shippingDetailse}>
           <div>
             <p>
@@ -202,7 +191,7 @@ const PaymentPage = () => {
               required
               name="name"
               value=""
-              placeholder="VISA 9999 9999 9999 9999 "
+              placeholder="visa  "
             ></input>
           </div>
         </div>
@@ -238,7 +227,7 @@ const PaymentPage = () => {
         <div className={styles.shipping}>
           <p>Shipping</p>
           <div>
-            <p className={styles.price}>$— USD</p>
+            <p className={styles.price}>$- USD</p>
           </div>
         </div>
         {/* <-----------------Top Subtotal Section Ends here-------------> */}
@@ -248,8 +237,8 @@ const PaymentPage = () => {
         ></input>
         <div className={styles.shipping}>
           <div>
-            <p style={{ fontSize: '26px', fontWeight: 'bold' }}>Total</p>
-            <p style={{ fontSize: '22px', color: '#949494' }}>
+            <p style={{ fontSize: '20px', fontWeight: '700' }}>TOTAL</p>
+            <p style={{ fontSize: '17px', color: '#949494' }}>
               Estimated Total
             </p>
           </div>
@@ -269,8 +258,8 @@ const PaymentPage = () => {
         </div>
 
         <div className={styles.donationWarning}>
-          <p style={{ display: 'flex', marginLeft: '12%', marginBottom: '8%' }}>
-            <BsTriangle />
+          <p style={{ display: 'flex', fontSize:"15px" ,marginLeft: '10%', marginBottom: '8%' }}>
+            <BsTriangle style={{marginTop:"1.3%", marginRight:"5px"}} />
             <b>Crowdfunding is not shopping</b>
           </p>
           <p>
@@ -292,20 +281,20 @@ const PaymentPage = () => {
         </div>
 
         <div className={styles.policy}>
-          <input type="checkbox"></input>
+          <input type="checkbox" required></input>
           <p>
             I agree to the{' '}
             <span style={{ color: '#e51075' }}>
               <u>Terms of Use</u>
             </span>{' '}
             and have read and understand the{' '}
-            <span style={{ color: '#e51075' }}>
+            <span style={{ color: '#e51075', fontWeight:"500px" }}>
               <u>Privacy Policy</u>
             </span>
           </p>
         </div>
         <Button onClick={onOpen} >
-        <AiFillLock style={{marginTop:"2%", marginRight:"30px"}} />
+        <AiFillLock style={{marginTop:"2%", marginRight:"10px"}} />
           Submit Payment
           </Button>
               <Modal isOpen={isOpen} onClose={onClose}>

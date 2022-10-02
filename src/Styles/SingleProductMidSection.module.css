@@ -18,23 +18,23 @@
 .leftMidSectionImages > p {
   width: 90%;
   margin: auto;
-  font-size: 19px;
+  font-size: 20px;
   text-align: center;
   margin-top: 3%;
   margin-bottom: 3%;
 }
 
 .faqSection {
-  border: 1px solid rgb(146, 144, 144);
+  border: 1px solid rgb(219, 215, 215);
   font-size: 16px;
   display: flex;
-  padding: 10px 100px;
+  padding: 26px 100px;
   gap: 5px;
 }
 .faqSection > img {
-  margin-top: 0%;
-  width: 5%;
-  height: 30px;
+  margin-top: -1.3%;
+  width: 7%;
+  height: 40px;
 }
 
 .faqSection + p {
@@ -42,23 +42,23 @@
   color: grey;
 }
 .optionTitle {
-  font-size: 22px;
-  font-weight: bold;
+  font-size: 17px;
+  font-weight: 500;
 }
 .rightSideDiv {
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
   margin-top: 3%;
-  width: 70%;
+  width: 80%;
   height: auto;
   border: 1px solid rgb(185, 183, 181);
 }
 
 .rightSideDiv:hover{
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .rightSideDiv > img {
   width: 100%;
-  height: 250px;
+  height: 230px;
 }
 
 .rightSideDiv > p {
@@ -67,8 +67,9 @@
 }
 
 .rightSideDiv > p:nth-child(2) {
-  font-weight: bold;
-  font-size: 22px;
+ 
+  font-weight: 500;
+  font-size: 20px;
   margin-top: 8%;
   width: 100%;
   text-align: left;
@@ -78,8 +79,10 @@
 
 .shippingText {
   font-size: 17px;
+  /* font-weight: 300; */
 }
 .shippingText ~ p {
+  font-weight: 300;
   line-height: 30px;
   font-size: 17px;
 }
@@ -90,9 +93,11 @@
 
 .rightSideDiv > button {
   width: 90%;
+  font-weight: 500;
+  font-size: 12px;
   margin-left: 5%;
   color: #e51075;
-  padding: 12px 40px;
+  padding: 10px 40px;
   margin-bottom: 6%;
   border: 1px solid rgb(183, 182, 182);
 }

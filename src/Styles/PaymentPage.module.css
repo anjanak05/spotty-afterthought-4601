@@ -7,7 +7,7 @@
 }
 .paymentPageLeftSection {
   width: 60%;
-  padding-left: 7%;
+  padding-left: 14%;
   padding-top: 6%;
   height: 100%;
   margin-bottom: 7%;
@@ -17,23 +17,24 @@
   width: 40%;
   background-color: #fafafa;
   padding-top: 6%;
-  padding-left: 4%;
-  padding-right: 7%;
+  padding-left: 3%;
+  padding-right: 9%;
   /* border: 1px solid rgb(102, 9, 189); */
 }
 #contriTitle {
-  font-size: 26px;
+  font-size: 18px;
   font-weight: bold;
   font-family: Georgia, 'Serif';
 }
 #addressSideTitle {
-  font-size: 19px;
+  font-size: 14px;
+  font-weight: 500;
   color: #949494;
-  font-family: benton-sans, Helvetica, 'Sans-serif';
+  /* font-family: benton-sans, Helvetica, 'Sans-serif'; */
 }
 
 #addressSideTitle ~ p {
-  font-size: 32px;
+  font-size: 22px;
   margin-top: 2%;
   font-weight: 600;
 }
@@ -45,8 +46,8 @@
 #createAccount {
   margin-top: 5%;
   margin-bottom: 5%;
-  font-family: Georgia, 'Serif';
-  font-size: 25px;
+  /* font-family: benton-sans, Georgia, 'Serif'; */
+  font-size:17px;
 }
 
 .emailName {
@@ -54,7 +55,7 @@
 }
 .emailName > div {
   width: 50%;
-  font-size: 23px;
+  font-size: 17px;
   font-weight: 500;
   margin-bottom: 4%;
   /* border: 1px solid rgb(2, 179, 17); */
@@ -62,21 +63,23 @@
 .emailName > div > input {
   margin-top: 2%;
   width: 90%;
-  height: 65px;
+  height: 40px;
   border: 1px solid #dedbdb;
 }
 
 .emailName + div,
 .policy {
-  font-size: 23px;
+  /* font-family: benton-sans, Georgia, 'Serif'; */
+  font-weight:"200";
+  font-size: 16px;
   display: flex;
 }
 
 .emailName + div > input {
-  width: 15%;
-  height: 25px;
-  margin-left: -52px;
-  margin-right: -40px;
+  width: 5%;
+  height: 16px;
+  margin-left: -8px;
+  margin-right: 3px;
   margin-top: 0.7%;
 }
 
@@ -85,18 +88,27 @@
   width: 93%;
   border: 1px solid #d2d0d0;
 }
-
+.shippingAddresss{
+  display: flex;
+  font-size: 20px;
+  font-weight: 600;
+  font-family:   'Serif';
+  margin-top: 5%;
+  margin-bottom: 4%;
+}
 .shippingDetailse > div {
   width: 100%;
   font-weight: 500;
-  font-size: 23px;
+  font-size: 17px;
   /* border: 1px solid #14bd6b; */
   margin-top: 6%;
 }
 
 .shippingDetailse > div > input {
   width: 100%;
-  height: 65px;
+  height: 40px;
+  font-size: 15px;
+  padding-left: 2%;
   margin-top: 2%;
   border: 1px solid #dedbdb;
 }
@@ -119,21 +131,21 @@
 
 .subTotal > p,
 .shipping > p {
-  font-size: 24px;
+  font-size: 16px;
   color: #949494;
 }
 
 .priceSectionImage > img {
-  width: 27%;
-  height: 63px;
+  width: 35%;
+  height: 45px;
 }
 
 .priceSectionImage > p {
-  font-size: 19px;
+  font-size: 15px;
 }
 .priceSectionImage {
   width: 75%;
-  gap: 25px;
+  gap: 15px;
   /* border:1px solid rgb(6, 154, 63) */
 }
 .priceSection {
@@ -143,38 +155,40 @@
   /* border:1px solid red */
 }
 .price {
-  font-weight: bold;
-  font-size: 24px;
+  font-weight: 500;
+  font-size: 17px;
 }
 .price + p {
-  font-size: 20px;
+  font-size: 14px;
   color: #949494;
 }
 .countryArea {
   margin-top: 4%;
   margin-bottom: 8%;
   width: 100%;
-  height: 63px;
-  font-size: 22px;
+  font-family: benton-sans, Georgia, 'Serif';
+  height: 47px;
+  font-size: 17px;
   padding-left: 4%;
   border: 1px solid #d2d0d0;
 }
 
 .paymentWarning {
   width: 100%;
-  padding: 26px;
-  font-size: 20px;
+  padding: 15px 27px;
+  font-size: 15px;
   text-align: left;
   height: auto;
-  margin-top: 8%;
-  margin-bottom: 4%;
+  margin-top: 6%;
+  margin-bottom: 2%;
+  border-radius: 2px;
   color: #007575;
   border: 1px solid #007575;
 }
 .donationWarning {
   width: 100%;
-  padding: 26px;
-  font-size: 20px;
+  padding: 26px 26px;
+  font-size: 13px;
   text-align: left;
   height: auto;
   margin-top: 8%;
@@ -185,24 +199,25 @@
 .policy {
   width: 100%;
   margin: auto;
-  font-size: 20px;
+  font-size: 15px;
   display: flex;
   gap: 15px;
 }
 
 .policy > input {
-  width: 15%;
-  height: 25px;
-  margin-left: -8px;
+  width: 8%;
+  height: 18px;
+  border:1px solid rgb(210, 207, 207);
+  margin-left: -0px;
   margin-top: 0.7%;
 }
 
 .policy + button {
-  font-size: 21px;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 500;
   color: white;
   background-color: #e51075;
-  padding: 18px 125px;
+  padding: 22px 100px;
   border-radius: 3px;
   margin-top: 6%;
   display: flex;

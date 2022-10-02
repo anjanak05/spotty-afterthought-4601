@@ -85,24 +85,24 @@ const SingleProductSection = ({ id }) => {
           />
           <p>{title1}</p>
           <p>
-            <b style={{ fontSize: '19px', marginRight: '1%' }}>{price1} USD</b>
+            <b style={{ fontSize: '21px', marginRight: '1%' }}>${price1} USD</b>
             <span
               style={{
-                fontSize: '19px',
+                fontSize: '16px',
                 textDecoration: 'line-through',
-                color: 'red',
+                color: '#e42749',
                 marginRight: '1%',
               }}
             >
               {' '}
               $549 USD
             </span>
-            <span style={{ fontSize: '19px', color: 'red' }}>(45% OFF)</span>
+            <span style={{ fontSize: '16px', color: '#e42749' }}>(45% OFF)</span>
             <p style={{ fontSize: '16px', color: 'grey', marginBottom: '1%' }}>
               ₹24,309 INR
             </p>
             <p className={styles.shippingText}>
-              <b>Estimated Shipping</b>
+              Estimated Shipping
             </p>
             <p>November 2022</p>
             <p>Only 6 left</p>
@@ -122,24 +122,24 @@ const SingleProductSection = ({ id }) => {
           />
           <p>{title2}</p>
           <p>
-            <b style={{ fontSize: '28px', marginRight: '1%' }}>{price2} USD</b>
+            <b style={{ fontSize: '21px', marginRight: '1%' }}>${price2} USD</b>
             <span
               style={{
-                fontSize: '22px',
+                fontSize: '16px',
                 textDecoration: 'line-through',
-                color: 'red',
+                color: '#e42749',
                 marginRight: '1%',
               }}
             >
               {' '}
               $1,089 USD
             </span>
-            <span style={{ fontSize: '22px', color: 'red' }}>(45% OFF)</span>
+            <span style={{ fontSize: '16px', color: '#e42749' }}>(45% OFF)</span>
             <p style={{ fontSize: '20px', color: 'grey', marginBottom: '3%' }}>
               ₹24,309 INR
             </p>
             <p className={styles.shippingText}>
-              <b>Estimated Shipping</b>
+              Estimated Shipping
             </p>
             <p>November 2022</p>
             <p>Only 6 left</p>
@@ -159,24 +159,24 @@ const SingleProductSection = ({ id }) => {
           />
           <p>{title3}</p>
           <p>
-            <b style={{ fontSize: '28px', marginRight: '1%' }}>{price3} USD</b>
+            <b style={{ fontSize: '21px', marginRight: '1%' }}>${price3} USD</b>
             <span
               style={{
-                fontSize: '22px',
+                fontSize: '16px',
                 textDecoration: 'line-through',
-                color: 'red',
+                color: '#e42749',
                 marginRight: '1%',
               }}
             >
               {' '}
               $1649 USD
             </span>
-            <span style={{ fontSize: '22px', color: 'red' }}>(45% OFF)</span>
+            <span style={{ fontSize: '16px', color:"#e42749 " }}>(45% OFF)</span>
             <p style={{ fontSize: '20px', color: 'grey', marginBottom: '3%' }}>
               ₹24,309 INR
             </p>
             <p className={styles.shippingText}>
-              <b>Estimated Shipping</b>
+              Estimated Shipping
             </p>
             <p>November 2022</p>
             <p>Only 6 left</p>
