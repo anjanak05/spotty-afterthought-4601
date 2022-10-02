@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from '../Styles/SingleProductMidSection.module.css';
 import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const SingleProductSection = ({ id }) => {
   const navigate = useNavigate();
@@ -19,32 +19,14 @@ const SingleProductSection = ({ id }) => {
       updatedProductData && setSingleProductData(updatedProductData);
     }
   }, [productData, id]);
-  console.log("pef",singlProductData)
 
-  const title1 = `${singlProductData.title} x 1`;
-  const title2 = `${singlProductData.title} x 2`;
-  const title3 = `${singlProductData.title} x 3`;
-  const price = 299;
-  const price1 = price * 1;
-  const price2 = price * 2;
-  const price3 = price * 3;
-  const image1 = "https://c2.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_762,g_center,q_auto:best,dpr_1.5,f_auto,h_506/mpxk3ni2rijd5sffammm"
-  const image2 = "https://c3.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_762,g_center,q_auto:best,dpr_1.5,f_auto,h_506/nz8a8ueek4jbbdwcnlj3" 
-  const image3 = "https://c4.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_762,g_center,q_auto:best,dpr_1.5,f_auto,h_506/ckzudy3ajms4qo7msavo"
+  const image1 =
+    'https://c2.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_762,g_center,q_auto:best,dpr_1.5,f_auto,h_506/mpxk3ni2rijd5sffammm';
+  const image2 =
+    'https://c3.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_762,g_center,q_auto:best,dpr_1.5,f_auto,h_506/nz8a8ueek4jbbdwcnlj3';
+  const image3 =
+    'https://c4.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_762,g_center,q_auto:best,dpr_1.5,f_auto,h_506/ckzudy3ajms4qo7msavo';
 
-  const HandlePerk = (mainTitle, productTitle, productPrice, imageurl) => {
-
-    console.log(mainTitle, productTitle, productPrice, imageurl)
-    
-    navigate('/paymentPage', {
-      state: {
-        name: mainTitle,
-        productTitle: productTitle,
-        productPrice: productPrice,
-        imageurl:imageurl,
-      },
-    });
-  };
 
   return (
     <div className={styles.midSectionImages}>
@@ -79,13 +61,10 @@ const SingleProductSection = ({ id }) => {
       <div className={styles.rightMidSectionImages}>
         <p className={styles.optionTitle}>Select an option</p>
         <div className={styles.rightSideDiv}>
-          <img
-            src={image1}
-            alt="extra pic  "
-          />
-          <p>{title1}</p>
+          <img src={image1} alt="extra pic  " />
+          <p>{`${singlProductData.title} x 1`}</p>
           <p>
-            <b style={{ fontSize: '21px', marginRight: '1%' }}>${price1} USD</b>
+            <b style={{ fontSize: '21px', marginRight: '1%' }}>${299*1} USD</b>
             <span
               style={{
                 fontSize: '16px',
@@ -97,32 +76,28 @@ const SingleProductSection = ({ id }) => {
               {' '}
               $549 USD
             </span>
-            <span style={{ fontSize: '16px', color: '#e42749' }}>(45% OFF)</span>
+            <span style={{ fontSize: '16px', color: '#e42749' }}>
+              (45% OFF)
+            </span>
             <p style={{ fontSize: '16px', color: 'grey', marginBottom: '1%' }}>
               ₹24,309 INR
             </p>
-            <p className={styles.shippingText}>
-              Estimated Shipping
-            </p>
+            <p className={styles.shippingText}>Estimated Shipping</p>
             <p>November 2022</p>
-            <p>Only 6 left</p>
+            <p>Only <b>6</b> left</p>
             <p>Ships worldwide.</p>
           </p>
-          <button
-            button
-            onClick={() => HandlePerk(singlProductData.title, title1, price1, image1)}
-          >
-            GET THIS PERK
-          </button>
+          <Link to={`/PaymentPage/${id}`}>
+            <button button className={styles.handlePerk}>
+              GET THIS PERK
+            </button>
+          </Link>
         </div>
         <div className={styles.rightSideDiv}>
-          <img
-            src={image2}
-            alt="extra pic  "
-          />
-          <p>{title2}</p>
+          <img src={image2} alt="extra pic  " />
+          <p>{`${singlProductData.title} x 2`}</p>
           <p>
-            <b style={{ fontSize: '21px', marginRight: '1%' }}>${price2} USD</b>
+            <b style={{ fontSize: '21px', marginRight: '1%' }}>${299*2} USD</b>
             <span
               style={{
                 fontSize: '16px',
@@ -134,32 +109,26 @@ const SingleProductSection = ({ id }) => {
               {' '}
               $1,089 USD
             </span>
-            <span style={{ fontSize: '16px', color: '#e42749' }}>(45% OFF)</span>
+            <span style={{ fontSize: '16px', color: '#e42749' }}>
+              (45% OFF)
+            </span>
             <p style={{ fontSize: '20px', color: 'grey', marginBottom: '3%' }}>
               ₹24,309 INR
             </p>
-            <p className={styles.shippingText}>
-              Estimated Shipping
-            </p>
+            <p className={styles.shippingText}>Estimated Shipping</p>
             <p>November 2022</p>
-            <p>Only 6 left</p>
+            <p>Only <b>6</b> left</p>
             <p>Ships worldwide.</p>
           </p>
-          <button
-            button
-            onClick={() => HandlePerk(singlProductData.title, title2, price2, image2)}
-          >
-            GET THIS PERK
-          </button>
+          <Link to={`/PaymentPage/${id}`}>
+            <button className={styles.handlePerk}>GET THIS PERK</button>
+          </Link>
         </div>
         <div className={styles.rightSideDiv}>
-          <img
-            src={image3}
-            alt="extra pic  "
-          />
-          <p>{title3}</p>
+          <img src={image3} alt="extra pic  " />
+          <p>{`${singlProductData.title} x 3`}</p>
           <p>
-            <b style={{ fontSize: '21px', marginRight: '1%' }}>${price3} USD</b>
+            <b style={{ fontSize: '21px', marginRight: '1%' }}>${299*3} USD</b>
             <span
               style={{
                 fontSize: '16px',
@@ -171,22 +140,22 @@ const SingleProductSection = ({ id }) => {
               {' '}
               $1649 USD
             </span>
-            <span style={{ fontSize: '16px', color:"#e42749 " }}>(45% OFF)</span>
+            <span style={{ fontSize: '16px', color: '#e42749 ' }}>
+              (45% OFF)
+            </span>
             <p style={{ fontSize: '20px', color: 'grey', marginBottom: '3%' }}>
               ₹24,309 INR
             </p>
-            <p className={styles.shippingText}>
-              Estimated Shipping
-            </p>
+            <p className={styles.shippingText}>Estimated Shipping</p>
             <p>November 2022</p>
-            <p>Only 6 left</p>
+            <p>Only <b>6</b> left</p>
             <p>Ships worldwide.</p>
           </p>
-          <button
-            onClick={() => HandlePerk(singlProductData.title, title3, price3, image3)}
+          <Link
+            to={`/PaymentPage/${id}`}
           >
-            GET THIS PERK
-          </button>
+            <button className={styles.handlePerk}>GET THIS PERK</button>
+          </Link>
         </div>
       </div>
     </div>

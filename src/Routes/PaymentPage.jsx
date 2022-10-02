@@ -1,32 +1,35 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import {  useParams } from 'react-router-dom';
 import styles from '../Styles/PaymentPage.module.css';
 import { FaAngleLeft } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
-import {  Button, Text, useDisclosure } from '@chakra-ui/react';
+import {  Button } from '@chakra-ui/react';
 import { AiFillLock } from 'react-icons/ai';
 import { BsTriangle } from 'react-icons/bs';
-import {
-  Modal,
-  ModalOverlay,
-   ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
-} from '@chakra-ui/react'
+import {useSelector} from "react-redux"
 
 const PaymentPage = () => {
-  const location = useLocation();
+  const {id} = useParams();
   const navigate = useNavigate();
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
-  const { isOpen, onOpen, onClose } = useDisclosure();
 
 
+ const [singlProductData, setSingleProductData] = useState({});
 
- console.log(location);
+  const productData = useSelector(
+    state => state.productPageReducer.audioProjects
+  );
+
+  useEffect(() => {
+    if (id) {
+      const updatedProductData = productData.find(
+        elem => elem.id === Number(id)
+      );
+      updatedProductData && setSingleProductData(updatedProductData);
+    }
+  }, [productData, id]);
+
   const handleBack = () => {
     navigate(-1);
   };
@@ -42,7 +45,9 @@ const PaymentPage = () => {
       <div className={styles.paymentPageLeftSection}>
         <div>
           <p id={styles.addressSideTitle}>YOU'RE CONTRIBUTING TO</p>
-          <p>{location.state.name}</p>
+          <p>
+            {singlProductData.title}
+          </p>
           <p onClick={handleBack}>
             <FaAngleLeft />
             <span
@@ -203,12 +208,12 @@ const PaymentPage = () => {
         {/* <---------------Price section Top Starting--------> */}
         <div className={styles.priceSection}>
           <div className={styles.priceSectionImage}>
-            <img src={location.state.imageurl} alt="imagesofproducts" />
-            <p>{location.state.productTitle}</p>
+            <img src="https://c2.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_762,g_center,q_auto:best,dpr_1.5,f_auto,h_506/mpxk3ni2rijd5sffammm" alt="imagesofproducts" />
+            <p>{singlProductData.title}</p>
           </div>
           <p>
             {' '}
-            <p className={styles.price}>${location.state.productPrice} USD</p>
+            <p className={styles.price}>${299*2} USD</p>
             <p>₹43,008 INR</p>
           </p>
         </div>
@@ -220,7 +225,7 @@ const PaymentPage = () => {
         <div className={styles.subTotal}>
           <p>Subtotal</p>
           <div>
-            <p className={styles.price}>${location.state.productPrice} USD</p>
+            <p className={styles.price}>${299*2} USD</p>
             <p>₹43,008 INR</p>
           </div>
         </div>
@@ -244,7 +249,7 @@ const PaymentPage = () => {
           </div>
           <div>
             <p className={styles.price} style={{ marginTop: '4%' }}>
-              ${location.state.productPrice} USD
+              ${299*2} USD
             </p>
             <p style={{ color: 'black' }}>₹43,008 INR</p>
           </div>

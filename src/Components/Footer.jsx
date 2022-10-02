@@ -12,21 +12,26 @@ import {
   Checkbox,
   Button,
 } from '@chakra-ui/react';
-import {FaFacebookF,FaTwitter,FaYoutube,FaInstagram,FaLinkedinIn,FaSpotify} from "react-icons/fa"
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaYoutube,
+  FaInstagram,
+  FaLinkedinIn,
+  FaSpotify,
+} from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
+
 const Footer = () => {
-  const location = useLocation()
-console.log(location)
   return (
     <div>
       {/* <br></br> */}
-      <Box  fontSize="sm" bg={useColorModeValue('#F5F5F5', 'gray.900')}>
+      <Box fontSize="sm" bg={useColorModeValue('#F5F5F5', 'gray.900')}>
         <Container as={Stack} maxW={'6xl'} py={4}>
           <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }}>
             <Stack align={'flex-start'}>
               <Heading color="gray.600" fontSize="md" fontWeight="semibold">
                 EXPLORE
-                
               </Heading>
               <Link href={'#'}>What we do</Link>
               <Link href={'#'}>Funding</Link>
@@ -57,16 +62,15 @@ console.log(location)
               <Link href={'#'}>Enterprise</Link>
               <Link href={'#'}> China</Link>
             </Stack>
-            <VStack >
+            <VStack>
               <Heading fontSize="md">Find it first on Indiegogo</Heading>
-              <Heading  fontSize="20px" fontWeight="normal">
+              <Heading fontSize="20px" fontWeight="normal">
                 Discover new and clever products in the Indiegogo newsletter
               </Heading>
               <br />
               <br />
 
               <Input
-          
                 placeholder="Your Email Address"
                 backgroundColor="white"
                 border="1px solid black"
@@ -75,9 +79,11 @@ console.log(location)
                 }}
               />
               <Heading fontWeight="medium" fontSize="small" marginTop="10px">
-          
-              <Checkbox ml="2px" border="1px gray" backgroundColor="gray.200" >
-                </Checkbox>
+                <Checkbox
+                  ml="2px"
+                  border="1px gray"
+                  backgroundColor="gray.200"
+                ></Checkbox>
                 I agree to the{' '}
                 <Link
                   style={{
@@ -103,7 +109,7 @@ console.log(location)
               </Heading>
               <Link to="/Signup">
                 <Button
-                marginTop="7%"
+                  marginTop="7%"
                   borderRadius="none"
                   loadingText="Submitting"
                   size="md"
@@ -122,10 +128,21 @@ console.log(location)
             </VStack>
           </SimpleGrid>
           <Box display="flex" gap="20px">
-
-          <Box w="150px" justifyContent="space-evenly" fontSize="smaller" h="25px" border="1px" paddingLeft="30px"> ₹ Indian Rupee</Box>
-          <Heading gap="20px" display="flex" fontSize="md">
-            <FaFacebookF/> <FaTwitter/> <FaYoutube/> <FaInstagram/> <FaLinkedinIn/> <FaSpotify/> </Heading>
+            <Box
+              w="150px"
+              justifyContent="space-evenly"
+              fontSize="smaller"
+              h="25px"
+              border="1px"
+              paddingLeft="30px"
+            >
+              {' '}
+              ₹ Indian Rupee
+            </Box>
+            <Heading gap="20px" display="flex" fontSize="md">
+              <FaFacebookF /> <FaTwitter /> <FaYoutube /> <FaInstagram />{' '}
+              <FaLinkedinIn /> <FaSpotify />{' '}
+            </Heading>
           </Box>
         </Container>
 
