@@ -16,6 +16,8 @@ const Navbar = () => {
   
 
   //console.log("navbar", userData.userInfo.firstname)
+  const userData=useSelector((state)=>state.authReducer);
+  console.log(userData);
 
   const handledrop = () => {
     setDrop(!drop);
@@ -23,7 +25,7 @@ const Navbar = () => {
     setT(true)
   };
 
-  const handle = ({children}) => {
+  const handle = () => {
     setT(!t)
     setDrop(!drop);
     setPage(!page);
