@@ -12,6 +12,7 @@ import {
   Checkbox,
   Button,
 } from '@chakra-ui/react';
+import {FaFacebookF,FaTwitter,FaYoutube,FaInstagram,FaLinkedinIn,FaSpotify} from "react-icons/fa"
 import { Link, useLocation } from 'react-router-dom';
 const Footer = () => {
   const location = useLocation()
@@ -118,7 +119,12 @@ console.log(location)
               </Link>
             </VStack>
           </SimpleGrid>
-          <Heading fontSize="smaller">BsSpotifyBsSpotifyBsSpotifyBsSpotifyBsSpotifyBsSpotifyBsSpotifyBsSpotifyBsSpotify</Heading>
+          <Box display="flex" gap="20px">
+
+          <Box w="150px" justifyContent="space-evenly" fontSize="smaller" h="25px" border="1px"> ₹Indian Rupee</Box>
+          <Heading gap="20px" display="flex" fontSize="md">
+            <FaFacebookF/> <FaTwitter/> <FaYoutube/> <FaInstagram/> <FaLinkedinIn/> <FaSpotify/> </Heading>
+          </Box>
         </Container>
 
         <Box
