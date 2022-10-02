@@ -25,7 +25,7 @@ const PaymentPage = () => {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const { isOpen, onOpen, onClose } = useDisclosure()
-  //   console.log(location.state);
+ console.log(location);
   const handleBack = () => {
     navigate(-1);
   };

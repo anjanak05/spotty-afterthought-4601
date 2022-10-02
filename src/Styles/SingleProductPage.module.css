@@ -5,24 +5,26 @@
   height: auto;
 }
 .TopSectionSingleProductPage {
+  margin-top: 2%;
   display: flex;
   font-family: benton-sans, Helvetica, 'Sans-serif';
 
 }
 .TopSectionSingleProductPage > div:nth-child(1) {
-  width: 55%;
+  width: 58%;
+  height: 400px;
   /* border: 1px solid rgb(0, 255, 68); */
 }
 .TopSectionSingleProductPage > div:nth-child(1) > iframe {
   width: 100%;
-  height: 630px;
+  height: 440px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding-left: 30px;
 }
 .TopSectionSingleProductPage > div:nth-child(2) {
-  width: 45%;
+  width: 40%;
   /* border: 1px solid rgb(22, 12, 167); */
   padding-left: 3%;
   padding-right: 2%;
@@ -32,22 +34,22 @@
   color: #088366;
   margin-bottom: 8px;
   font-weight: 600px;
-  font-size: 21px;
+  font-size: 16px;
   letter-spacing: 1px;
 }
 
 .singleProductTitle {
   color: black;
   margin-bottom: 15px;
-  font-weight: bold;
-  font-size: 42px;
+  font-weight: 600;
+  font-size: 27px;
   line-height: 130%;
   letter-spacing: 1.5px;
   width: 90%;
 }
 
 .singleProductPara {
-  font-size: 28px;
+  font-size: 18px;
   letter-spacing: 0.5px;
 }
 
@@ -55,15 +57,21 @@
   margin-top: 3%;
   display: flex;
   gap: 10px;
-  font-size: 22px;
+  font-size: 18px;
+}
+
+.singleProductPageCompanyName>img{
+ width: 10%;
+height: 45px;
 }
 
 .bold {
+  font-size: 18px;
   font-weight: 600;
 }
 
 .singleProductPageFund {
-  font-size: 23px;
+  font-size: 18px;
   color: #2a2a2a;
   letter-spacing: 0.5px;
   margin-top: 5%;
@@ -71,7 +79,7 @@
 }
 
 .singleProductPageFundSecond {
-  font-size: 23px;
+  font-size: 17px;
   color: #2a2a2a;
   letter-spacing: 0.5px;
       padding-bottom: 1%;
@@ -84,33 +92,33 @@
 .singleProductPageSocialMedia>button{
     border:1px solid rgb(195, 194, 194);
     display: flex;
-    font-size: 18px;
-    padding: 20px 30px;
+    font-size: 16px;
+    padding: 12px 20px;
     margin-top: 5%;
     color: black;
     font-weight: bold;
 }
 
 .socialMediaIcons{
-    width: 23%;
-    height: 40px;
+    width: 22%;
+    height: 30px;
     margin-top: 6%;
-    font-size: 35px;
+    font-size: 22px;
     color: rgb(103, 101, 101);
     justify-content: space-between;
 }
 
 .smallImages{
-  border-bottom: 2px solid rgb(177, 177, 178);
+  border-bottom: 1px solid rgb(177, 177, 178);
   display: flex;
-  padding-left: 16%;
+  padding-left: 20%;
   gap: 8px;
-  margin-top: 1%;
-  padding-bottom: 2.5%;
+  margin-top: 4%;
+  padding-bottom: 2%;
 }
 
 .smallImages>img{
-  width: 4%;
+  width: 5%;
   height:50px;
 }
 

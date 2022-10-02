@@ -1,19 +1,18 @@
 import React ,{ useState,useEffect} from 'react'
-
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import  Dropdown  from './Dropdown';
-
 import { useSelector } from 'react-redux';
 import { BsFillCaretDownFill, BsFillCaretUpFill } from 'react-icons/bs';
 import { Box } from '@chakra-ui/react';
 import {GrSearch} from "react-icons/gr"
 
 const Navbar = () => {
-
+const isAuth = useSelector((state)=>state.authReducer.isAuth)
+console.log(isAuth)
   const [drop, setDrop] = useState(true);
   const [page, setPage] = useState(false);
   const [t , setT] = useState(true)
-  
+  const location = useLocation()
 
   //console.log("navbar", userData.userInfo.firstname)
 
@@ -78,14 +77,14 @@ const Navbar = () => {
     
           
     
-            
-    <NavLink to="/Login" style={{fontSize:"17px",paddingRight:"20px"}}>
+            {isAuth?location.state:<NavLink to="/Login" style={{fontSize:"17px",paddingRight:"20px"}}>
             Login
-            </NavLink>
+            </NavLink>}
     
-    <NavLink to="/Signup" style={{fontSize:"17px",paddingRight:"20px"}}>
+    
+    {isAuth?"":<NavLink to="/Signup" style={{fontSize:"17px",paddingRight:"20px"}}>
               Sign Up
-            </NavLink>
+            </NavLink>}
     
           </div>
         </nav>
