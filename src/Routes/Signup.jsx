@@ -17,6 +17,8 @@ import {
   Checkbox,
 } from '@chakra-ui/react';
 import {Link, useNavigate} from 'react-router-dom';
+
+
 const Singup = () => {
   const [email,setEmail]= useState("");
   const [password,setPassword] = useState("");
@@ -37,6 +39,7 @@ const Singup = () => {
     return axios
       .post(`https://masai-api-mocker.herokuapp.com/auth/register`, formData)
       .then((res) => {
+        console.log(res.token)
         alert("Registrations successfully!");
         navigate("/Login");
       })
@@ -103,7 +106,7 @@ const Singup = () => {
                 type='submit'
                 borderRadius="none"
                   loadingText="Submitting"
-                  width="500px"
+                  width="400px"
                   size="md"
                   backgroundColor="#E51075"
                   color={'white'}
@@ -112,11 +115,11 @@ const Singup = () => {
                   }}>
                   Create Account
                 </Button>
-                <p style={{marginLeft:"220px"}}>Or</p>
+                <p style={{marginLeft:"190px"}}>or</p>
                 <Button
                 borderRadius="none"
                   loadingText="Submitting"
-                  width="500px"
+                  width="400px"
                   size="md"
                   backgroundColor="#32569A"
                   color={'white'}

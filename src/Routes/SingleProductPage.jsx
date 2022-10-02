@@ -37,7 +37,7 @@ console.log(productData)
         <div>
           <iframe
             width="100%"
-            height="600px"
+            height="200px"
             src="https://www.youtube.com/embed/FF2fDzR_L4w"
             title={singlProductData.title}
             frameborder="0"
@@ -67,7 +67,7 @@ console.log(productData)
           <p className={styles.singleProductPageFund}>
             <span
               style={{
-                fontSize: '27px',
+                fontSize: '19px',
                 fontWeight: 'Bold',
                 borderBottom: '2px dotted grey',
               }}
@@ -82,7 +82,7 @@ console.log(productData)
           <div className={styles.singleProductPageSocialMedia}>
             <button>
               <BsHeart
-                style={{ fontSize: '25px', marginRight: '10px', color: 'grey' }}
+                style={{ fontSize: '18px', marginRight: '7px', color: 'grey', marginTop:"4.5%" }}
               />
               FOLLOW
             </button>

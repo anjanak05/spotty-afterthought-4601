@@ -33,7 +33,9 @@ const SingleProductSection = ({ id }) => {
   const image3 = "https://c4.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_762,g_center,q_auto:best,dpr_1.5,f_auto,h_506/ckzudy3ajms4qo7msavo"
 
   const HandlePerk = (mainTitle, productTitle, productPrice, imageurl) => {
-    console.log(title1)
+
+    console.log(mainTitle, productTitle, productPrice, imageurl)
+    
     navigate('/paymentPage', {
       state: {
         name: mainTitle,
@@ -83,10 +85,10 @@ const SingleProductSection = ({ id }) => {
           />
           <p>{title1}</p>
           <p>
-            <b style={{ fontSize: '28px', marginRight: '1%' }}>{price1} USD</b>
+            <b style={{ fontSize: '19px', marginRight: '1%' }}>{price1} USD</b>
             <span
               style={{
-                fontSize: '22px',
+                fontSize: '19px',
                 textDecoration: 'line-through',
                 color: 'red',
                 marginRight: '1%',
@@ -95,8 +97,8 @@ const SingleProductSection = ({ id }) => {
               {' '}
               $549 USD
             </span>
-            <span style={{ fontSize: '22px', color: 'red' }}>(45% OFF)</span>
-            <p style={{ fontSize: '20px', color: 'grey', marginBottom: '3%' }}>
+            <span style={{ fontSize: '19px', color: 'red' }}>(45% OFF)</span>
+            <p style={{ fontSize: '16px', color: 'grey', marginBottom: '1%' }}>
               ₹24,309 INR
             </p>
             <p className={styles.shippingText}>

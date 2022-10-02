@@ -1,20 +1,31 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styles from '../Styles/PaymentPage.module.css';
 import { FaAngleLeft } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { Heading } from '@chakra-ui/react';
+import { Heading, useDisclosure } from '@chakra-ui/react';
 import { AiFillLock } from 'react-icons/ai';
 import { BsTriangle } from 'react-icons/bs';
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  Button,
+  Lorem,
+} from '@chakra-ui/react'
 
 const PaymentPage = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
-
-  //   console.log(location.state);
+  const { isOpen, onOpen, onClose } = useDisclosure()
+ console.log(location);
   const handleBack = () => {
     navigate(-1);
   };
@@ -293,12 +304,29 @@ const PaymentPage = () => {
             </span>
           </p>
         </div>
-        <button onClick={handleCheckoutNavigate}>
-          {' '}
+        <Button onClick={onOpen} >
+        <AiFillLock style={{marginTop:"2%", marginRight:"30px"}} />
+          Submit Payment
+          </Button>
+              <Modal isOpen={isOpen} onClose={onClose}>
+               <ModalOverlay />
+               <ModalContent>
           
-          <AiFillLock style={{marginTop:"2%", marginRight:"30px"}} />
-          SUBMIT PAYMENT
-        </button>
+            <ModalHeader>Payment SucessFul</ModalHeader>
+            <ModalHeader>Thank You</ModalHeader>
+            <ModalCloseButton />
+              <ModalBody>
+             </ModalBody>
+
+              <ModalFooter>
+                <Link to='/'>
+                <Button colorScheme='blue' mr={3} onClick={onClose}>
+                  Close
+                </Button>
+                </Link>
+              </ModalFooter>
+            </ModalContent>
+          </Modal>
       </div>
     </div>
   );
