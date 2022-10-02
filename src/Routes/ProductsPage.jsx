@@ -4,8 +4,10 @@ import React from "react"
 
 import { getAudioProjectData,handleFilterAudio,handleSort,filterAudioData,sortAudioData } from "../Redux/productPageReducer/action"
 import { useEffect,useState } from "react"
-//import { BiSearch } from 'react-icons/bi'
+import { BiSearch } from 'react-icons/bi'
+import {AiOutlineHeart} from "react-icons/ai"
 import AccordionComponenent from "../Components/AccordionComponent"
+import { NavLink } from "react-router-dom"
 
 import {
     Drawer,
@@ -21,7 +23,7 @@ import { useDisclosure } from "@chakra-ui/react"
 
 import { Link } from 'react-router-dom'
 
-// ? <AiTwotoneFire/> :   <MdWatchLater/>
+
 
 
 const ProductsPage = () => {
@@ -140,7 +142,7 @@ const ProductsPage = () => {
                       <InputGroup>
                            <InputLeftElement
                              pointerEvents='none'
-                             //children={<BiSearch color='gray.300' />}
+                             children={<BiSearch color='gray.300' />}
                            />
                            <Input type='search' placeholder='Search for campaigns' borderRadius={"0px"}/>
                          </InputGroup>
@@ -173,7 +175,7 @@ const ProductsPage = () => {
                             audioData.map((elem)=>(
                             <Wrap spacing="10px">
                                  <WrapItem>
-                                 <Box key={elem.id}   border="1px solid #e1e1e1" textAlign="left"  >
+                                 <Box key={elem.id} style={{height:"600px"}}  border="1px solid #e1e1e1" textAlign="left"  >
 
                                
 
@@ -184,7 +186,7 @@ const ProductsPage = () => {
                                    <Box mb={"10px"}>
                                           <Flex  justifyContent="space-between" gap="10px" alignItems={"center"}>
                                                <Text fontSize='sm' color="teal">{elem.category}</Text> 
-                                               {/* <AiOutlineHeart /> */}
+                                                <AiOutlineHeart /> 
                                           </Flex>
                                    </Box> 
                                    <hr /> 
@@ -242,7 +244,7 @@ const ProductsPage = () => {
                       <InputGroup>
                            <InputLeftElement
                              pointerEvents='none'
-                             //children={<BiSearch color='gray.300' />}
+                             children={<BiSearch color='gray.300' />}
                            />
                            <Input type='search' placeholder='Search for campaigns' borderRadius={"0px"}/>
                          </InputGroup>
@@ -253,25 +255,24 @@ const ProductsPage = () => {
 {/* --------------------------------------------------------Drawer filter -------------------------------------------- */}
 <>  
     
-    <Stack spacing={4} direction='row' align='center'>
-    <Wrap spacing={4}>
-    <WrapItem>
-    <Button  ref={btnRef} gap="20px"  onClick={onOpen}>
-        Category
-      </Button>
-      </WrapItem>
-      <WrapItem>
-    <Button  ref={btnRef} gap="20px"  onClick={onOpen}>
-       Filter
-      </Button>
-      </WrapItem>
-      <WrapItem>
-    <Button  ref={btnRef} gap="20px"  onClick={onOpen}>
+    
+  
+    
+    
+   <div >
+   <Center>
+   <Button  ref={btnRef}   size='md'
+  height='48px'
+  width="80%"
+  border='2px'
+  borderColor='green.500' onClick={onOpen}>
         Sort
       </Button>
-      </WrapItem>
-      </Wrap>
-</Stack>
+   </Center>
+   </div>
+      
+     
+
 
 
 
@@ -288,17 +289,24 @@ const ProductsPage = () => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>Create your account</DrawerHeader>
+          <DrawerHeader>All Categories</DrawerHeader>
 
-          <DrawerBody>
-            <Input placeholder='Type here...' />
+          <DrawerBody >
+        <NavLink to="/ProductsPage">
+        <Text>Audio</Text> 
+          </NavLink><br />
+          <Text>Camera Gear</Text> <br />
+          <Text>Education</Text> <br />
+          <Text>Energy & Green Tech</Text> <br />
+          <Text>Fashion & Wearables</Text> <br />
+          <Text>Food & Beverages</Text> <br />
+          <Text>Health & Fitness</Text> <br />
+          <Text>Home</Text> <br />           
           </DrawerBody>
 
           <DrawerFooter>
-            <Button variant='outline' mr={3} onClick={onClose}>
-              Cancel
-            </Button>
-            <Button colorScheme='blue'>Save</Button>
+          
+          
           </DrawerFooter>
         </DrawerContent>
       </Drawer>

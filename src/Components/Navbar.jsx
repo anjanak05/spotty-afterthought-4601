@@ -15,6 +15,8 @@ console.log(isAuth)
   const location = useLocation()
 
   //console.log("navbar", userData.userInfo.firstname)
+  const userData=useSelector((state)=>state.authReducer);
+  console.log(userData);
 
   const handledrop = () => {
     setDrop(!drop);
@@ -22,7 +24,7 @@ console.log(isAuth)
     setT(true)
   };
 
-  const handle = ({children}) => {
+  const handle = () => {
     setT(!t)
     setDrop(!drop);
     setPage(!page);
