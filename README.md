@@ -1,3 +1,63 @@
+# Project Indiegogo Clone
+- Indiegogo is your destination for clever innovations in tech, design, and more, often with special perks and pricing for early adopters. Back a campaign, share your ideas and feedback with the project team - and join the risks and rewards of bringing new products to life.
+- Collaborative project buid by team of 4, executed in 5 days.
+
+## Features
+- Login/signup
+- Detailed description of each product.
+- Add to cart functionality with required quanitity of the each product.
+- Increase/decrease the quantity, deleting the cart items from the cart page.
+- Checkout page to pay and confirm the order.
+
+## Tech Stack
+> React,Redux,Javascript, HTML, CSS and API
+
+## Demo Link
+  - [https://indiegogoteamspootyafterthought.netlify.app/)
+## Images
+- Home page
+
+  ![image]()
+ 
+- Search bar
+  
+  ![image]()
+ 
+- Product page
+ 
+  ![image]()
+ 
+- Cart page
+ 
+  ![image]()
+
+## Authors
+- [@Anjana Kushwaha](https://github.com/anjanak05)
+- [@Rushikesh Pardhikar](https://github.com/Rushikesh7997)
+- [@Shivam Choudhary](https://github.com/THESHIVAM007)
+- [@Shivam Gupta](https://github.com/shivamgupta8482)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
