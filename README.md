@@ -3,6 +3,7 @@
 - Collaborative project buid by team of 4, executed in 5 days.
 
 ## Features
+- Home Page
 - Login/signup
 - Detailed description of each product.
 - Add to cart functionality with required quanitity of the each product.
