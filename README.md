@@ -18,19 +18,23 @@
 ## Images
 - Home page
 
-  ![image]()
+  ![image](https://github.com/shivamgupta8482/indegogoclone/blob/master/images/Homepage.png)
  
-- Search bar
+- Navbar
   
-  ![image]()
+  ![image](https://github.com/shivamgupta8482/indegogoclone/blob/master/images/Navbar.png)
  
 - Product page
  
-  ![image]()
+  ![image](https://github.com/shivamgupta8482/indegogoclone/blob/master/images/Productpage.png)
  
-- Cart page
+- Singleproduct page
  
-  ![image]()
+  ![image](https://github.com/shivamgupta8482/indegogoclone/blob/master/images/SingleProductpage.png)
+  
+  - Signup page
+ 
+  ![image](https://github.com/shivamgupta8482/indegogoclone/blob/master/images/Signup.png)
 
 ## Authors
 - [@Anjana Kushwaha](https://github.com/anjanak05)
