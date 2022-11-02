@@ -7,7 +7,7 @@
 - Login/signup
 - Detailed description of each product.
 - Add to cart functionality with required quanitity of the each product.
-- Increase/decrease the quantity, deleting the cart items from the cart page.
+- Increase or decrease the quantity, deleting the cart items from the cart page.
 - Checkout page to pay and confirm the order.
 
 ## Tech Stack
